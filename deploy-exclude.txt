@@ -1,0 +1,9 @@
+.git
+.gitignore
+.gitattributes
+.vscode
+deploy-package
+deploy-to-infinityfree.bat
+deploy-exclude.txt
+README.md
+*.md
