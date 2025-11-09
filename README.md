@@ -1,4 +1,4 @@
-# DigitalKhazana - Digital Product Selling Platform
+# GyanBazaar - Digital Product Selling Platform
 
 A complete, responsive digital product marketplace built with PHP, MySQL, and MDBootstrap. Features adaptive layouts for both mobile (native app experience) and desktop (professional website).
 
@@ -39,8 +39,8 @@ A complete, responsive digital product marketplace built with PHP, MySQL, and MD
 
 1. **Clone/Download the project**
    ```bash
-   git clone <repository-url>
-   cd DigitalKhazana
+   git clone https://github.com/nitin9917/gyanbazaar.git
+   cd gyanbazaar
    ```
 
 2. **Create Database**
@@ -57,14 +57,14 @@ A complete, responsive digital product marketplace built with PHP, MySQL, and MD
    define('DB_HOST', 'localhost');
    define('DB_USER', 'your_username');
    define('DB_PASS', 'your_password');
-   define('DB_NAME', 'digitalkhazana');
+   define('DB_NAME', 'gyanbazaar');
    ```
 
 4. **Configure Site URL**
    - Edit `config/config.php`
    - Update SITE_URL:
    ```php
-   define('SITE_URL', 'http://localhost/DigitalKhazana');
+   define('SITE_URL', 'http://localhost/GyanBazaar');
    ```
 
 5. **Set Permissions**
@@ -73,12 +73,12 @@ A complete, responsive digital product marketplace built with PHP, MySQL, and MD
    ```
 
 6. **Access the Application**
-   - Frontend: `http://localhost/DigitalKhazana`
-   - Admin Panel: `http://localhost/DigitalKhazana/admin`
+   - Frontend: `http://localhost/GyanBazaar`
+   - Admin Panel: `http://localhost/GyanBazaar/admin`
 
 ### Default Admin Credentials
-- **Email**: admin@digitalkhazana.com
-- **Password**: password
+- **Email**: admin@gyanbazaar.com
+- **Password**: admin123
 
 **⚠️ Important**: Change the admin password immediately after first login!
 
@@ -108,7 +108,7 @@ A complete, responsive digital product marketplace built with PHP, MySQL, and MD
 ## Project Structure
 
 ```
-DigitalKhazana/
+GyanBazaar/
 ├── admin/                  # Admin panel files
 │   ├── includes/          # Admin header/footer
 │   ├── index.php          # Dashboard
@@ -227,7 +227,7 @@ This project is open-source and available for personal and commercial use.
 For issues and questions:
 - Check documentation
 - Review code comments
-- Contact: support@digitalkhazana.com
+- GitHub: https://github.com/nitin9917/gyanbazaar
 
 ## Credits
 - MDBootstrap: https://mdbootstrap.com
