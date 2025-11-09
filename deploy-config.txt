@@ -1,0 +1,17 @@
+# GyanBazaar Deployment Configuration
+# Fill in your InfinityFree details below
+
+[FTP]
+FTP_HOST=ftpupload.net
+FTP_USER=epiz_xxxxx
+FTP_PASS=your_password
+FTP_PORT=21
+
+[DATABASE]
+DB_HOST=sqlxxx.infinityfreeapp.com
+DB_USER=epiz_xxxxx
+DB_PASS=your_password
+DB_NAME=epiz_xxxxx_gyanbazaar
+
+[SITE]
+SITE_URL=https://yoursite.infinityfreeapp.com

@@ -1,0 +1,138 @@
+========================================
+  GyanBazaar - Automatic Deployment
+========================================
+
+STEP 1: Get InfinityFree Account
+---------------------------------
+1. Go to: https://infinityfree.net/sign-up
+2. Create account
+3. Create hosting account
+4. Choose subdomain (e.g., gyanbazaar.infinityfreeapp.com)
+5. Wait 5 minutes for activation
+
+
+STEP 2: Get Your Credentials
+-----------------------------
+Login to InfinityFree Control Panel and find:
+
+FTP Details:
+  - FTP Host: ftpupload.net
+  - FTP Username: epiz_xxxxx (COPY THIS!)
+  - FTP Password: (your password)
+
+Database Details (Create if not exists):
+  - Go to: MySQL Databases
+  - Create database: gyanbazaar
+  - Copy these details:
+    * Database Name: epiz_xxxxx_gyanbazaar
+    * Database User: epiz_xxxxx
+    * Database Password: (your password)
+    * MySQL Hostname: sqlxxx.infinityfreeapp.com
+
+
+STEP 3: Configure Deployment
+-----------------------------
+1. Open: deploy-config.txt
+2. Replace these values:
+
+   [FTP]
+   FTP_USER=epiz_xxxxx          ← Your FTP username
+   FTP_PASS=your_password       ← Your FTP password
+
+   [DATABASE]
+   DB_HOST=sqlxxx.infinityfreeapp.com  ← Your MySQL hostname
+   DB_USER=epiz_xxxxx                   ← Your database user
+   DB_PASS=your_password                ← Your database password
+   DB_NAME=epiz_xxxxx_gyanbazaar       ← Your database name
+
+   [SITE]
+   SITE_URL=https://yoursite.infinityfreeapp.com  ← Your site URL
+
+3. Save the file
+
+
+STEP 4: Run Deployment
+-----------------------
+Double-click: ONE_CLICK_DEPLOY.bat
+
+The script will:
+✓ Pull latest code from GitHub
+✓ Update configuration files
+✓ Download FTP client (if needed)
+✓ Upload all files to InfinityFree
+✓ Show you the live URL
+
+Time: 5-15 minutes (mostly upload time)
+
+
+STEP 5: Import Database (Manual)
+---------------------------------
+After deployment completes:
+
+1. Go to: InfinityFree Control Panel
+2. Click: phpMyAdmin
+3. Select your database: epiz_xxxxx_gyanbazaar
+4. Click: Import tab
+5. Choose file: database.sql (from C:\xampp\htdocs\GyanBazaar\)
+6. Click: Go
+7. Wait for success message
+
+
+STEP 6: Test Your Site
+-----------------------
+Visit: https://yoursite.infinityfreeapp.com
+
+Admin Panel: https://yoursite.infinityfreeapp.com/admin
+  Email: admin@gyanbazaar.com
+  Password: admin123
+
+
+========================================
+  Troubleshooting
+========================================
+
+"Upload failed"
+  → Check credentials in deploy-config.txt
+  → Wait 10 minutes after account creation
+  → Try again
+
+"Database connection error"
+  → Check database details in deploy-config.txt
+  → Make sure database was imported
+  → MySQL hostname is NOT "localhost"
+
+"Page not found"
+  → Wait 5 minutes for DNS propagation
+  → Clear browser cache
+  → Check files uploaded to /htdocs/
+
+
+========================================
+  Need Help?
+========================================
+
+Check these files:
+  - SIMPLE_DEPLOY.md (manual method)
+  - DEPLOYMENT_GUIDE.md (detailed guide)
+  - upload.log (upload details)
+
+Or contact support
+
+
+========================================
+  Quick Reference
+========================================
+
+Files to configure:
+  ✓ deploy-config.txt
+
+Files to run:
+  ✓ ONE_CLICK_DEPLOY.bat
+
+Manual step:
+  ✓ Import database.sql via phpMyAdmin
+
+That's it! Your site will be live!
+
+
+========================================
