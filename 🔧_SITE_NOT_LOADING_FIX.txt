@@ -1,0 +1,147 @@
+========================================
+  SITE NOT LOADING - TROUBLESHOOTING
+========================================
+
+COMMON REASONS & FIXES:
+========================================
+
+1. DEPLOYMENT STILL IN PROGRESS
+----------------------------------------
+✓ First deployment takes 10-15 minutes
+✓ Check Render dashboard status
+✓ Wait for "Live" green status
+
+How to check:
+- Go to: https://dashboard.render.com/
+- Click on "gyanbazaar" service
+- Look at status (top right)
+- If "Building" or "Deploying" → Wait
+- If "Live" → Continue to next step
+
+2. DOCKER BUILD FAILED
+----------------------------------------
+Check the logs for errors:
+
+Go to Render dashboard → gyanbazaar → Logs
+
+Common errors:
+
+Error: "Port binding failed"
+Fix: Check Dockerfile uses $PORT variable
+
+Error: "Composer install failed"
+Fix: Check composer.json is valid
+
+Error: "Database connection failed"
+Fix: Database might not be ready yet
+
+3. PHP SERVER NOT STARTING
+----------------------------------------
+The Dockerfile might have issues.
+
+Let me check and fix it...
+
+4. DATABASE NOT READY
+----------------------------------------
+The database takes 5-10 minutes to provision.
+
+Check:
+- Go to Render dashboard
+- Click "gyanbazaar-db"
+- Status should be "Available"
+- If "Creating" → Wait
+
+5. WRONG PORT CONFIGURATION
+----------------------------------------
+Render uses dynamic ports.
+
+The Dockerfile must use: ${PORT:-10000}
+
+========================================
+  QUICK FIX: CHECK LOGS
+========================================
+
+1. Go to: https://dashboard.render.com/
+2. Click "gyanbazaar" service
+3. Click "Logs" tab
+4. Look for errors
+
+Common log messages:
+
+✓ "Build successful" → Good!
+✓ "Starting service" → Good!
+✓ "Listening on port" → Good!
+✗ "Error" or "Failed" → Problem!
+
+Copy the error message and I'll help fix it.
+
+========================================
+  MANUAL REDEPLOY
+========================================
+
+If stuck, force a redeploy:
+
+1. Go to Render dashboard
+2. Click "gyanbazaar"
+3. Click "Manual Deploy" button
+4. Select "Clear build cache & deploy"
+5. Wait 10-15 minutes
+
+========================================
+  CHECK IF SITE IS ACTUALLY RUNNING
+========================================
+
+Even if loading slowly, check:
+
+1. Open browser DevTools (F12)
+2. Go to Network tab
+3. Try loading the site
+4. Check response:
+   - 200 OK → Site working, just slow
+   - 502 Bad Gateway → Service not started
+   - 503 Service Unavailable → Still deploying
+   - Timeout → Port issue
+
+========================================
+  ALTERNATIVE: USE RAILWAY INSTEAD
+========================================
+
+If Render keeps failing, try Railway:
+
+1. Go to: https://railway.app/
+2. Click "Start a New Project"
+3. Select "Deploy from GitHub repo"
+4. Choose: sfddb248-lab/gyanbazaar
+5. Add MySQL database
+6. Deploy
+
+Railway is often faster and more reliable.
+
+========================================
+  WHAT TO SEND ME FOR HELP
+========================================
+
+To help you fix this, send me:
+
+1. Current status (Building/Deploying/Live/Failed)
+2. Last 20 lines from Logs tab
+3. Any error messages you see
+4. Screenshot of Render dashboard
+
+I'll fix it immediately!
+
+========================================
+  MOST LIKELY ISSUE
+========================================
+
+If this is your first deployment:
+→ Just wait 10-15 minutes
+→ Render free tier is slow on first deploy
+→ Check back in 10 minutes
+
+If deployment shows "Live" but site won't load:
+→ Check logs for PHP errors
+→ Database might not be connected
+→ Port configuration issue
+
+========================================
