@@ -37,7 +37,18 @@ try {
         die("❌ SQL file not found: $sql_file");
     }
     
-    echo "<p>📄 Reading SQL file...</p>";
+    // Detect database type
+    $is_postgres = ($port == '5432');
+    
+    // Choose correct SQL file
+    if ($is_postgres && file_exists('database-postgresql.sql')) {
+        $sql_file = 'database-postgresql.sql';
+        echo "<p>📄 Using PostgreSQL database file...</p>";
+    } else {
+        echo "<p>📄 Using MySQL database file...</p>";
+    }
+    
+    echo "<p>📄 Reading SQL file: $sql_file...</p>";
     $sql = file_get_contents($sql_file);
     
     if ($sql === false) {
@@ -56,11 +67,16 @@ try {
     foreach ($queries as $query) {
         if (empty($query)) continue;
         
-        if ($conn->query($query) === TRUE) {
+        try {
+            if ($is_postgres) {
+                $conn->exec($query);
+            } else {
+                $conn->query($query);
+            }
             $success_count++;
-        } else {
+        } catch (Exception $e) {
             $error_count++;
-            echo "<p style='color: orange;'>⚠️ Warning: " . $conn->error . "</p>";
+            echo "<p style='color: orange;'>⚠️ Warning: " . $e->getMessage() . "</p>";
         }
     }
     
@@ -72,14 +88,24 @@ try {
     }
     
     // Verify tables were created
-    $result = $conn->query("SHOW TABLES");
-    $table_count = $result->num_rows;
+    if ($is_postgres) {
+        $result = $conn->query("SELECT tablename FROM pg_tables WHERE schemaname = 'public'");
+        $tables = $result->fetchAll(PDO::FETCH_COLUMN);
+        $table_count = count($tables);
+    } else {
+        $result = $conn->query("SHOW TABLES");
+        $table_count = $result->num_rows;
+        $tables = [];
+        while ($row = $result->fetch_array()) {
+            $tables[] = $row[0];
+        }
+    }
     
     echo "<p>✓ Database has $table_count tables</p>";
     echo "<h3>Tables created:</h3><ul>";
     
-    while ($row = $result->fetch_array()) {
-        echo "<li>" . $row[0] . "</li>";
+    foreach ($tables as $table) {
+        echo "<li>$table</li>";
     }
     
     echo "</ul>";
