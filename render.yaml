@@ -6,8 +6,6 @@ services:
     plan: free
     repo: https://github.com/sfddb248-lab/gyanbazaar
     branch: main
-    buildCommand: composer install --no-dev --optimize-autoloader
-    startCommand: php -S 0.0.0.0:$PORT -t .
     envVars:
       - key: PHP_VERSION
         value: 8.1
