@@ -2,11 +2,12 @@
 // Universal Database Configuration for Railway/Render
 // Works with both MySQL and PostgreSQL
 
-define('DB_HOST', getenv('DB_HOST') ?: getenv('MYSQLHOST') ?: 'localhost');
-define('DB_USER', getenv('DB_USER') ?: getenv('MYSQLUSER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') ?: getenv('MYSQLPASSWORD') ?: '');
-define('DB_NAME', getenv('DB_NAME') ?: getenv('MYSQLDATABASE') ?: 'gyanbazaar');
-define('DB_PORT', getenv('DB_PORT') ?: getenv('MYSQLPORT') ?: '3306');
+// Railway uses MYSQL* variables, Render uses DB_* variables
+define('DB_HOST', getenv('MYSQLHOST') ?: getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('MYSQLUSER') ?: getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('MYSQLPASSWORD') ?: getenv('DB_PASS') ?: '');
+define('DB_NAME', getenv('MYSQLDATABASE') ?: getenv('DB_NAME') ?: 'gyanbazaar');
+define('DB_PORT', getenv('MYSQLPORT') ?: getenv('DB_PORT') ?: '3306');
 
 // Detect database type by port
 $is_postgres = (DB_PORT == '5432');

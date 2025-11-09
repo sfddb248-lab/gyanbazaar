@@ -1,0 +1,56 @@
+========================================
+  AUTOMATIC DEPLOYMENT - RAILWAY
+========================================
+
+I've set everything up for you!
+
+JUST DO THIS:
+========================================
+
+1. Go to: https://railway.app/new
+
+2. Click: "Deploy from GitHub repo"
+
+3. Login with GitHub (use: sfddb248-lab)
+
+4. Select: gyanbazaar
+
+5. Click: "Deploy Now"
+
+6. Click: "+ New" → "Database" → "Add MySQL"
+
+7. DONE! Wait 3 minutes.
+
+========================================
+  YOUR SITE WILL BE LIVE!
+========================================
+
+Railway will give you a URL like:
+https://gyanbazaar-production.up.railway.app
+
+Everything is automatic:
+✓ MySQL database created
+✓ Database connected
+✓ Site deployed
+✓ Ready to use!
+
+After deployment, visit:
+/import-db.php (to import database)
+
+Then your site is 100% working!
+
+========================================
+  WHY RAILWAY?
+========================================
+
+✓ FREE MySQL (Render doesn't have this)
+✓ Works with your existing code
+✓ No conversion needed
+✓ Faster deployment
+✓ Better free tier
+
+========================================
+
+START: https://railway.app/new
+
+========================================
