@@ -1,0 +1,12 @@
+# Large media files
+assets/uploads/courses/videos/*.mp4
+uploads/products/*.pdf
+assets/uploads/profiles/*.jpg
+assets/uploads/profiles/*.jpeg
+assets/uploads/profiles/*.png
+
+# Database
+*.sql
+
+# Config files with sensitive data
+config/database.php
