@@ -1,0 +1,9 @@
+open ftpupload.net
+if0_40371517
+Nitin@9917
+binary
+cd /htdocs
+lcd deploy-package
+prompt
+mput *.*
+bye

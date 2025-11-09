@@ -1,0 +1,112 @@
+┌──────────────────────────────────────────────────────────────────┐
+│                                                                  │
+│              GyanBazaar - QUICK REFERENCE CARD                   │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+
+
+🚀 FASTEST WAY TO DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Double-click: ONE_CLICK_DEPLOY_COMPLETE.bat
+   
+   Time: 10-15 minutes
+
+
+🔑 CREDENTIALS YOU NEED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Get from: https://app.infinityfree.com/
+   
+   FTP:
+   • Host: ftpupload.net
+   • User: epiz_40371517
+   • Pass: (your password)
+   
+   Database:
+   • Host: sql301.infinityfreeapp.com
+   • User: if0_40371517
+   • Pass: (your password)
+   • Name: if0_40371517_gyanbazaar
+
+
+📁 KEY FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Deployment:
+   • ONE_CLICK_DEPLOY_COMPLETE.bat  → Main script
+   • auto-deploy-complete.py        → Python backend
+   
+   Testing:
+   • check-credentials.php          → Test database
+   • test-connection.php            → Verify setup
+   
+   Guides:
+   • START_HERE.txt                 → Start here!
+   • VISUAL_FIX_GUIDE.txt          → Visual guide
+   • COMPLETE_DEPLOYMENT_GUIDE.md   → Full guide
+
+
+🔧 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Python not found?
+   → Install from python.org OR use manual upload
+   
+   FTP failed?
+   → Use InfinityFree File Manager
+   
+   Database error?
+   → Use check-credentials.php
+   
+   500 error?
+   → Read HTTP_500_ERROR_SOLUTION.md
+
+
+🌐 IMPORTANT URLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Your Site:
+   https://gyanbazaar.infinityfree.me/
+   
+   Test Tool:
+   https://gyanbazaar.infinityfree.me/check-credentials.php
+   
+   Admin Panel:
+   https://gyanbazaar.infinityfree.me/admin/
+   
+   Control Panel:
+   https://app.infinityfree.com/
+
+
+✅ AFTER DEPLOYMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Visit your site
+   2. Test database connection
+   3. Import database.sql (if needed)
+   4. Delete test files
+   5. Test all features
+   6. Done! 🎉
+
+
+⏱️ TIME ESTIMATES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Automatic:  10-15 min
+   Manual:     20-30 min
+   Test First: 15-20 min
+
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Read: START_HERE.txt
+   Then: COMPLETE_DEPLOYMENT_GUIDE.md
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│                                                                  │
+│              Ready? Run: ONE_CLICK_DEPLOY_COMPLETE.bat           │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘

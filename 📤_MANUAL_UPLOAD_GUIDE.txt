@@ -1,0 +1,185 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              📤 MANUAL UPLOAD - SUPER SIMPLE! 📤                    ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+Python is not installed, so we'll upload manually.
+It's VERY EASY - just follow these 7 steps!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+STEP 1: Open Your Browser
+────────────────────────────────────────────────────────────────────
+
+   Open Chrome, Firefox, or any browser
+
+
+STEP 2: Go to InfinityFree
+────────────────────────────────────────────────────────────────────
+
+   Type this URL: https://app.infinityfree.com/
+   
+   Press Enter
+
+
+STEP 3: Login
+────────────────────────────────────────────────────────────────────
+
+   Enter your InfinityFree username and password
+   
+   Click "Login"
+
+
+STEP 4: Open File Manager
+────────────────────────────────────────────────────────────────────
+
+   You'll see your website listed
+   
+   Click the "File Manager" button
+   
+   (It looks like a folder icon)
+
+
+STEP 5: Open htdocs Folder
+────────────────────────────────────────────────────────────────────
+
+   You'll see a folder called "htdocs"
+   
+   Double-click on "htdocs" to open it
+
+
+STEP 6: Upload Files
+────────────────────────────────────────────────────────────────────
+
+   Click the "Upload" button at the top
+   
+   Click "Select Files" or drag and drop
+   
+   Navigate to your computer:
+   C:\xampp\htdocs\GyanBazaar\deploy-final\
+   
+   Select ALL files and folders inside deploy-final
+   
+   Click "Open" or "Upload"
+   
+   IMPORTANT: Upload EVERYTHING from deploy-final folder!
+
+
+STEP 7: Wait for Upload
+────────────────────────────────────────────────────────────────────
+
+   Wait 5-10 minutes for all files to upload
+   
+   You'll see a progress bar
+   
+   Don't close the browser until it's done!
+
+
+DONE! Visit Your Site:
+────────────────────────────────────────────────────────────────────
+
+   https://gyanbazaar.infinityfreeapp.com/
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+✅ WHAT TO UPLOAD:
+
+
+   Location on your computer:
+   C:\xampp\htdocs\GyanBazaar\deploy-final\
+   
+   Upload ALL of these:
+   ✅ config folder
+   ✅ includes folder
+   ✅ admin folder
+   ✅ assets folder
+   ✅ All PHP files (index.php, products.php, etc.)
+   ✅ .htaccess file (important!)
+   
+   Upload to:
+   htdocs folder on InfinityFree
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+⚠️ IMPORTANT TIPS:
+
+
+   1. Make sure to upload the .htaccess file
+      (It might be hidden on Windows)
+   
+   2. Upload ALL folders and files
+      Don't skip anything!
+   
+   3. Wait for upload to complete
+      Don't close browser too early
+   
+   4. If upload fails, try again
+      InfinityFree sometimes has timeouts
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+📋 AFTER UPLOAD:
+
+
+   1. Visit: https://gyanbazaar.infinityfreeapp.com/
+   
+   2. If you see database errors:
+      • Go back to InfinityFree control panel
+      • Click "phpMyAdmin"
+      • Select database: if0_40371517_gyanbazaar
+      • Click "Import" tab
+      • Upload file: database.sql
+      • Click "Go"
+   
+   3. Your site should now work perfectly!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🎯 QUICK REFERENCE:
+
+
+   InfinityFree:  https://app.infinityfree.com/
+   Your Site:     https://gyanbazaar.infinityfreeapp.com/
+   
+   Upload From:   C:\xampp\htdocs\GyanBazaar\deploy-final\
+   Upload To:     htdocs folder on InfinityFree
+   
+   Time:          10-15 minutes
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+✅ CHECKLIST:
+
+
+   □ Opened https://app.infinityfree.com/
+   □ Logged in
+   □ Clicked "File Manager"
+   □ Opened "htdocs" folder
+   □ Clicked "Upload"
+   □ Selected ALL files from deploy-final folder
+   □ Waited for upload to complete
+   □ Visited https://gyanbazaar.infinityfreeapp.com/
+   □ Site is working!
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              That's it! Your site will be live! 🎉                  ║
+║                                                                      ║
+║              Time: 10-15 minutes                                     ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝

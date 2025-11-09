@@ -1,0 +1,134 @@
+========================================
+  GyanBazaar - Final Deployment Steps
+========================================
+
+Your deployment package is ready in: deploy-final folder
+
+STEP 1: Upload Files (5 minutes)
+---------------------------------
+1. Go to: https://cpanel.infinityfree.com
+2. Login to your InfinityFree account
+3. Click "File Manager" or "Online File Manager"
+4. Navigate to: /htdocs/ folder
+5. DELETE everything in /htdocs/ (if anything exists)
+6. Click "Upload" button
+7. Select ALL files from: C:\xampp\htdocs\GyanBazaar\deploy-final
+8. Wait for upload to complete (should be fast without videos)
+
+TIP: Upload folders one by one if bulk upload fails:
+  - admin/ folder
+  - config/ folder
+  - includes/ folder
+  - assets/ folder
+  - All .php files
+  - .htaccess file
+
+
+STEP 2: Import Database (2 minutes)
+------------------------------------
+1. In InfinityFree Control Panel, click "phpMyAdmin"
+2. Select database: if0_40371517_gyanbazaar
+3. Click "Import" tab at top
+4. Click "Choose File"
+5. Select: C:\xampp\htdocs\GyanBazaar\database.sql
+6. Scroll down and click "Go"
+7. Wait for "Import has been successfully finished" message
+
+
+STEP 3: Test Your Site (1 minute)
+----------------------------------
+Visit: https://gyanbazaar.infinityfreeapp.com
+
+Admin Panel: https://gyanbazaar.infinityfreeapp.com/admin
+  Email: admin@gyanbazaar.com
+  Password: admin123
+
+
+STEP 4: Verify Everything Works
+--------------------------------
+✓ Homepage loads
+✓ Products page works
+✓ Login/Signup works
+✓ Admin panel accessible
+✓ Database connected
+
+
+========================================
+  Your Site Configuration
+========================================
+
+Database Host: sql301.infinityfreeapp.com
+Database User: if0_40371517
+Database Pass: Nitin@9917
+Database Name: if0_40371517_gyanbazaar
+
+Site URL: https://gyanbazaar.infinityfreeapp.com
+
+FTP Host: ftpupload.net
+FTP User: if0_40371517
+FTP Pass: Nitin@9917
+
+
+========================================
+  Adding Videos Later
+========================================
+
+Option 1: YouTube (Recommended)
+  - Upload videos to YouTube (unlisted)
+  - Copy video IDs
+  - Update course videos in admin panel
+
+Option 2: Google Drive
+  - Upload videos to Google Drive
+  - Get shareable links
+  - Embed in courses
+
+Option 3: FTP Upload (when FTP works)
+  - Wait 24 hours for FTP activation
+  - Upload videos to: /htdocs/assets/uploads/courses/videos/
+
+
+========================================
+  Troubleshooting
+========================================
+
+"Database connection error"
+  → Check config/database.php has correct details
+  → Make sure database was imported
+
+"Page not found"
+  → Check .htaccess file was uploaded
+  → Wait 5 minutes for DNS propagation
+
+"Admin login not working"
+  → Make sure database was imported
+  → Try: admin@gyanbazaar.com / admin123
+
+"Files not uploading"
+  → Upload in smaller batches
+  → Try different browser
+  → Use File Manager, not FTP
+
+
+========================================
+  Next Steps After Deployment
+========================================
+
+1. Login to admin panel
+2. Change admin password
+3. Add your products
+4. Configure payment gateways
+5. Test checkout process
+6. Add videos via YouTube/Drive
+
+
+========================================
+
+Your site is ready to go live!
+Just follow the 3 steps above.
+
+Total time: ~8 minutes
+
+Good luck! 🚀
+
+========================================

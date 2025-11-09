@@ -1,0 +1,136 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              🔒 SSL CERTIFICATE ERROR - SOLUTION 🔒                 ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+ERROR MESSAGE:
+"Your connection is not private"
+"net::ERR_CERT_DATE_INVALID"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT THIS MEANS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is NORMAL for InfinityFree free hosting!
+
+InfinityFree provides free SSL certificates, but they sometimes:
+• Expire
+• Have date issues
+• Take time to activate
+
+Your site is actually WORKING - it's just the SSL certificate that's
+causing the warning.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOLUTION 1: USE HTTP (Recommended for now)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Instead of: https://gyanbazaar.infinityfreeapp.com/
+Use this:    http://gyanbazaar.infinityfreeapp.com/
+
+Notice: http:// (not https://)
+
+✅ I've already updated config/config.php to use HTTP
+✅ Just re-upload config/config.php to your hosting
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOLUTION 2: BYPASS THE WARNING (Temporary)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you want to use HTTPS anyway:
+
+1. When you see the warning, click "Advanced"
+2. Click "Proceed to gyanbazaar.infinityfreeapp.com (unsafe)"
+3. Your site will load
+
+⚠️ This is safe for testing, but not recommended for production
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOLUTION 3: FIX SSL CERTIFICATE (Permanent)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To get a proper SSL certificate:
+
+OPTION A: Wait for InfinityFree SSL to activate
+   • Sometimes takes 24-72 hours
+   • Check back tomorrow
+
+OPTION B: Use Cloudflare (Free & Easy)
+   1. Sign up at: https://www.cloudflare.com/
+   2. Add your domain
+   3. Change nameservers (Cloudflare will guide you)
+   4. Enable "Flexible SSL" in Cloudflare
+   5. Wait 5-10 minutes
+   6. Your site will have valid HTTPS!
+
+OPTION C: Upgrade to paid hosting
+   • Paid hosting includes proper SSL
+   • More reliable
+   • Better performance
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT TO DO NOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Re-upload config/config.php
+   • I've updated it to use HTTP
+   • Upload: deploy-final/config/config.php
+   • To: htdocs/config/config.php
+
+STEP 2: Visit your site with HTTP
+   • Use: http://gyanbazaar.infinityfreeapp.com/
+   • NOT: https://gyanbazaar.infinityfreeapp.com/
+
+STEP 3: Your site should work perfectly!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Your site IS working - it's just the SSL certificate
+✅ Using HTTP is perfectly fine for testing
+✅ You can add proper SSL later with Cloudflare (free)
+✅ This is a common issue with free hosting
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK REFERENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Don't use: https://gyanbazaar.infinityfreeapp.com/
+✅ Use this:   http://gyanbazaar.infinityfreeapp.com/
+
+File updated: deploy-final/config/config.php
+Action needed: Re-upload config/config.php
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLOUDFLARE SETUP (Optional - For Free SSL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you want proper HTTPS:
+
+1. Go to: https://www.cloudflare.com/
+2. Sign up (free)
+3. Add site: gyanbazaar.infinityfreeapp.com
+4. Follow Cloudflare's instructions
+5. Enable "Flexible SSL"
+6. Wait 5-10 minutes
+7. Your site will have valid HTTPS!
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              Use HTTP for now - Your site is working! ✅            ║
+║                                                                      ║
+║              http://gyanbazaar.infinityfreeapp.com/                  ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝

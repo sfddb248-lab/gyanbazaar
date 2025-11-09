@@ -1,0 +1,172 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              📝 HOW TO CREATE YOUR SUBDOMAIN 📝                     ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+You want: gyanbazaar.infinityfreeapp.com
+
+This subdomain doesn't exist yet. You need to CREATE it first!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP-BY-STEP: CREATE SUBDOMAIN IN INFINITYFREE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+STEP 1: Login to InfinityFree
+────────────────────────────────────────────────────────────────────
+
+   Go to: https://app.infinityfree.com/
+   Login with your credentials
+
+
+STEP 2: Go to Control Panel
+────────────────────────────────────────────────────────────────────
+
+   Click on your account
+   Click "Control Panel" or "cPanel"
+
+
+STEP 3: Find "Addon Domains" or "Parked Domains"
+────────────────────────────────────────────────────────────────────
+
+   Look for one of these options:
+   • Addon Domains
+   • Parked Domains
+   • Subdomains
+   
+   Click on it
+
+
+STEP 4: Add Your Subdomain
+────────────────────────────────────────────────────────────────────
+
+   Enter: gyanbazaar
+   
+   Select domain: infinityfreeapp.com
+   
+   Full domain will be: gyanbazaar.infinityfreeapp.com
+   
+   Click "Add Domain" or "Create"
+
+
+STEP 5: Wait for DNS Propagation
+────────────────────────────────────────────────────────────────────
+
+   ⏱️ Wait time: 2-24 hours (usually 2-4 hours)
+   
+   During this time, the domain won't work yet
+
+
+STEP 6: Upload Your Files
+────────────────────────────────────────────────────────────────────
+
+   Once the subdomain is created:
+   
+   1. Go to File Manager
+   2. Navigate to the folder for your subdomain
+      (Usually: htdocs/gyanbazaar/ or public_html/gyanbazaar/)
+   3. Upload all files from deploy-final folder
+   4. OR upload to main htdocs if it's your primary domain
+
+
+STEP 7: Visit Your Site
+────────────────────────────────────────────────────────────────────
+
+   After DNS propagation (2-24 hours):
+   
+   http://gyanbazaar.infinityfreeapp.com/
+   
+   Your site will work!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ALTERNATIVE: USE YOUR DEFAULT SUBDOMAIN NOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+While waiting for gyanbazaar.infinityfreeapp.com to be created,
+you can use your default InfinityFree subdomain:
+
+Your default URL is probably:
+   http://if0-40371517.infinityfreeapp.com/
+
+This works IMMEDIATELY - no waiting!
+
+Steps:
+1. Upload files to htdocs folder
+2. Visit: http://if0-40371517.infinityfreeapp.com/
+3. Your site works right away!
+4. Later, add gyanbazaar.infinityfreeapp.com as addon domain
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ I've already set config to: gyanbazaar.infinityfreeapp.com
+✅ All files are ready in deploy-final folder
+✅ Database config is correct
+
+You just need to:
+1. Create the subdomain in InfinityFree
+2. Wait for DNS propagation (2-24 hours)
+3. Upload files
+4. Visit your site!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK START (No Waiting)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you want your site live RIGHT NOW:
+
+1. Use default URL: if0-40371517.infinityfreeapp.com
+2. Upload files to htdocs
+3. Site works immediately!
+4. Later add custom subdomain
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT TO DO NOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTION A: Create subdomain and wait
+   1. Follow steps above to create gyanbazaar.infinityfreeapp.com
+   2. Wait 2-24 hours
+   3. Upload files
+   4. Site works!
+
+OPTION B: Use default URL now (Recommended)
+   1. Upload files to htdocs
+   2. Visit: http://if0-40371517.infinityfreeapp.com/
+   3. Site works immediately!
+   4. Add custom subdomain later
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHECKING IF SUBDOMAIN EXISTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To check if gyanbazaar.infinityfreeapp.com exists:
+
+1. Go to InfinityFree Control Panel
+2. Look for "Addon Domains" or "Domains"
+3. Check if gyanbazaar.infinityfreeapp.com is listed
+
+If NOT listed:
+   → You need to create it (follow steps above)
+
+If listed:
+   → Wait for DNS propagation (2-24 hours)
+   → Then upload files
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              Create subdomain in InfinityFree first! 📝             ║
+║                                                                      ║
+║              OR use default URL for instant access! ⚡              ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝

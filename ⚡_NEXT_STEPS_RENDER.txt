@@ -1,0 +1,107 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              ⚡ RENDER - NEXT STEPS ⚡                               ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+You're logged into Render! Here's what to do next:
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 1: CONNECT GITHUB (Best - Auto-deploy)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. In Render dashboard
+2. Click your profile icon (top right)
+3. Click "Account Settings"
+4. Find "Connected Accounts"
+5. Click "Connect GitHub"
+6. Authorize Render
+7. Go back to dashboard
+8. Click "New +" → "Web Service"
+9. Select your "gyanbazaar" repository
+10. Click "Connect"
+11. Configure and deploy!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 2: USE PUBLIC REPOSITORY (Quick)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Make your GitHub repo public:
+   • Go to GitHub repo settings
+   • Scroll to "Danger Zone"
+   • Click "Change visibility" → "Make public"
+
+2. In Render dashboard:
+   • Click "New +" → "Web Service"
+   • Click "Public Git repository"
+   • Enter: https://github.com/YOUR_USERNAME/gyanbazaar
+   • Click "Continue"
+
+3. Configure:
+   • Name: gyanbazaar
+   • Environment: Docker
+   • Plan: Free
+   • Click "Create Web Service"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AFTER CONNECTING REPOSITORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Render will:
+1. Detect Dockerfile
+2. Build your container
+3. Deploy automatically
+4. Give you a URL: https://gyanbazaar.onrender.com
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THEN ADD DATABASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Use PlanetScale (Free MySQL):
+
+1. Go to: https://planetscale.com/
+2. Sign up
+3. Create database: gyanbazaar
+4. Get connection details
+5. Add to Render environment variables:
+   • DB_HOST
+   • DB_USER
+   • DB_PASS
+   • DB_NAME
+   • DB_PORT
+   • SITE_URL
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT'S YOUR GITHUB USERNAME?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Tell me your GitHub username and repository name, and I'll give you
+the exact URL to use!
+
+Example: https://github.com/username/gyanbazaar
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RECOMMENDED: OPTION 1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Connect GitHub to Render for:
+✅ Auto-deploy on push
+✅ Private repositories
+✅ Better integration
+✅ Easier management
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              Connect GitHub in Account Settings! 🔗                 ║
+║                                                                      ║
+║              Or tell me your GitHub repo URL! 📝                    ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝

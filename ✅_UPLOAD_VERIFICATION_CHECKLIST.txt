@@ -1,0 +1,202 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              ✅ UPLOAD VERIFICATION CHECKLIST ✅                    ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+Use this checklist to verify all files are uploaded correctly.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1: CHECK INFINITYFREE FILE MANAGER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://app.infinityfree.com/
+2. Login
+3. Click "File Manager"
+4. Open "htdocs" folder
+5. Check if these files/folders exist:
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRITICAL FILES (Must be present):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ .htaccess (IMPORTANT - might be hidden)
+□ index.php
+□ login.php
+□ signup.php
+□ products.php
+□ logout.php
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FOLDERS (Must be present):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ 📁 config/
+   □ config.php
+   □ database.php
+
+□ 📁 includes/
+   □ header.php
+   □ footer.php
+   □ functions.php
+   □ affiliate-functions.php
+   □ otp-functions.php
+
+□ 📁 admin/
+   □ index.php
+   □ login.php
+   □ products.php
+   □ orders.php
+   □ users.php
+   □ settings.php
+   □ affiliates.php
+
+□ 📁 assets/
+   □ 📁 css/
+   □ 📁 js/
+   □ 📁 images/
+   □ 📁 uploads/
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OTHER IMPORTANT FILES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ cart.php
+□ checkout.php
+□ orders.php
+□ profile.php
+□ affiliate-dashboard.php
+□ product-detail.php
+□ courses.php
+□ download.php
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2: TEST YOUR SITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Visit these URLs to check if files are uploaded:
+
+□ https://gyanbazaar.infinityfreeapp.com/
+   Expected: Homepage loads
+
+□ https://gyanbazaar.infinityfreeapp.com/products.php
+   Expected: Products page loads
+
+□ https://gyanbazaar.infinityfreeapp.com/login.php
+   Expected: Login page loads
+
+□ https://gyanbazaar.infinityfreeapp.com/admin/
+   Expected: Admin login page loads
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3: CHECK FOR ERRORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you see errors:
+
+❌ "500 Internal Server Error"
+   → Check if .htaccess file is uploaded
+   → Check if config/database.php exists
+
+❌ "Database connection failed"
+   → Import database.sql via phpMyAdmin
+   → Check database credentials in config/database.php
+
+❌ "File not found" or "404 Error"
+   → Files not uploaded correctly
+   → Re-upload missing files
+
+❌ Blank white page
+   → Check if includes/ folder is uploaded
+   → Check if config/config.php exists
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4: VERIFY FILE COUNT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In InfinityFree File Manager (htdocs folder):
+
+Expected file count: ~150-200 files total
+
+If you see less than 100 files:
+   → Upload is incomplete
+   → Re-upload all files from deploy-final folder
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5: CHECK HIDDEN FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMPORTANT: .htaccess file might be hidden!
+
+To see hidden files in InfinityFree File Manager:
+1. Look for "Show hidden files" option
+2. Or check if .htaccess appears in file list
+3. If missing, upload .htaccess manually
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK VERIFICATION METHOD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Visit this URL to auto-check:
+https://gyanbazaar.infinityfreeapp.com/check-connection.php
+
+This will show:
+✅ Which files exist
+✅ Database connection status
+✅ What's missing
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT TO DO IF FILES ARE MISSING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go back to InfinityFree File Manager
+2. Navigate to htdocs folder
+3. Click "Upload"
+4. Select the missing files from deploy-final folder
+5. Upload them
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COMPLETE UPLOAD CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ All folders uploaded (config, includes, admin, assets)
+□ All PHP files uploaded (index.php, products.php, etc.)
+□ .htaccess file uploaded
+□ Homepage loads without errors
+□ Products page loads
+□ Login page loads
+□ Admin panel accessible
+□ No 500 errors
+□ No database connection errors
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IF EVERYTHING IS CHECKED ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Congratulations! Your site is fully uploaded and working! 🎉
+
+Next steps:
+1. Import database.sql if you see database errors
+2. Test all features (login, signup, products)
+3. Delete test files (check-connection.php, etc.)
+4. Start using your site!
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              Use this checklist to verify your upload! ✅           ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝

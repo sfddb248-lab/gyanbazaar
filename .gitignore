@@ -1,5 +1,32 @@
-# Database
-*.sql
+# Dependencies
+vendor/
+node_modules/
 
-# Config files with sensitive data
+# Environment
+.env
+.env.local
 config/database.php
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads
+assets/uploads/*
+!assets/uploads/.gitkeep
+
+# Logs
+*.log
+
+# Deployment
+deploy-final/
+deploy-small/
+deploy-package/
+*.bat
+*.py

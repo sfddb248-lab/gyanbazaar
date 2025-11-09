@@ -1,0 +1,150 @@
+╔════════════════════════════════════════════════════════════════╗
+║          DATABASE CONNECTION ERROR - SOLUTION                  ║
+╚════════════════════════════════════════════════════════════════╝
+
+ERROR MESSAGE:
+Access denied for user 'if0_40371517'@'192.168.0.216' (using password: YES)
+
+MEANING:
+Your database password is WRONG or the database doesn't exist.
+
+╔════════════════════════════════════════════════════════════════╗
+║                    SOLUTION - 3 STEPS                          ║
+╚════════════════════════════════════════════════════════════════╝
+
+STEP 1: Get Correct Database Credentials
+────────────────────────────────────────────────────────────────
+1. Go to: https://app.infinityfree.com/
+2. Login to your account
+3. Click on your website: gyanbazaar.infinityfree.me
+4. Find "MySQL Databases" section
+5. Write down these values:
+   
+   MySQL Hostname: _______________________
+   MySQL Username: _______________________
+   MySQL Password: _______________________
+   MySQL Database: _______________________
+
+STEP 2: Test Your Credentials
+────────────────────────────────────────────────────────────────
+1. Upload this file to your hosting:
+   deploy-final/check-credentials.php
+
+2. Visit: https://gyanbazaar.infinityfree.me/check-credentials.php
+
+3. Enter your credentials from Step 1
+
+4. Click "Test Connection"
+
+5. If it says "Connection Successful" → Go to Step 3
+   If it says "Connection Failed" → Check your credentials again
+
+STEP 3: Update config/database.php
+────────────────────────────────────────────────────────────────
+1. Open: deploy-final/config/database.php
+
+2. Update with your CORRECT credentials:
+
+   define('DB_HOST', 'YOUR_ACTUAL_HOSTNAME');
+   define('DB_USER', 'YOUR_ACTUAL_USERNAME');
+   define('DB_PASS', 'YOUR_ACTUAL_PASSWORD');
+   define('DB_NAME', 'YOUR_ACTUAL_DATABASE');
+
+3. Save the file
+
+4. Upload to InfinityFree: htdocs/config/database.php
+
+5. Visit: https://gyanbazaar.infinityfree.me/
+
+6. Your site should now work! 🎉
+
+╔════════════════════════════════════════════════════════════════╗
+║                    COMMON ISSUES                               ║
+╚════════════════════════════════════════════════════════════════╝
+
+ISSUE 1: "Unknown database" error
+────────────────────────────────────────────────────────────────
+SOLUTION:
+1. Go to InfinityFree Control Panel
+2. Click "MySQL Databases"
+3. Create a new database (name it: gyanbazaar)
+4. Note the full name (e.g., if0_40371517_gyanbazaar)
+5. Import your database.sql file via phpMyAdmin
+
+ISSUE 2: "Access denied" error
+────────────────────────────────────────────────────────────────
+SOLUTION:
+1. Your password is wrong
+2. Go to InfinityFree Control Panel
+3. Reset your MySQL password
+4. Update config/database.php with new password
+
+ISSUE 3: Database exists but tables are missing
+────────────────────────────────────────────────────────────────
+SOLUTION:
+1. Go to InfinityFree Control Panel
+2. Click "phpMyAdmin"
+3. Select your database
+4. Click "Import" tab
+5. Upload: database.sql (from your local folder)
+6. Click "Go"
+
+╔════════════════════════════════════════════════════════════════╗
+║                    QUICK CHECKLIST                             ║
+╚════════════════════════════════════════════════════════════════╝
+
+□ Step 1: Got correct credentials from InfinityFree
+□ Step 2: Tested credentials using check-credentials.php
+□ Step 3: Updated config/database.php with correct values
+□ Step 4: Uploaded config/database.php to hosting
+□ Step 5: Imported database.sql if tables were missing
+□ Step 6: Tested site - it works!
+
+╔════════════════════════════════════════════════════════════════╗
+║                    HELPFUL FILES                               ║
+╚════════════════════════════════════════════════════════════════╝
+
+📄 check-credentials.php
+   → Upload this to test your database credentials
+   → Visit: https://gyanbazaar.infinityfree.me/check-credentials.php
+
+📄 GET_CORRECT_CREDENTIALS.md
+   → Detailed guide on getting credentials
+
+📄 config/database-TEMPLATE.php
+   → Template with instructions
+
+╔════════════════════════════════════════════════════════════════╗
+║                    AFTER IT WORKS                              ║
+╚════════════════════════════════════════════════════════════════╝
+
+Once your site is working:
+
+1. Delete these test files for security:
+   - check-credentials.php
+   - test-connection.php
+   - check-connection.php
+
+2. Test all pages:
+   - Homepage: https://gyanbazaar.infinityfree.me/
+   - Products: https://gyanbazaar.infinityfree.me/products.php
+   - Login: https://gyanbazaar.infinityfree.me/login.php
+
+3. Celebrate! 🎉
+
+╔════════════════════════════════════════════════════════════════╗
+║                    SUMMARY                                     ║
+╚════════════════════════════════════════════════════════════════╝
+
+Problem: Wrong database password in config/database.php
+Solution: Get correct credentials from InfinityFree and update file
+Time: 5 minutes
+Result: Site will work perfectly!
+
+────────────────────────────────────────────────────────────────
+The password "Nitin@9917" in your config file is either:
+1. Wrong - Get the correct one from InfinityFree
+2. Changed - Reset it in InfinityFree control panel
+────────────────────────────────────────────────────────────────
+
+Need help? Use check-credentials.php to test your connection!

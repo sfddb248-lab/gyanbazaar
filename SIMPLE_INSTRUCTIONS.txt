@@ -1,0 +1,79 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║              SIMPLE 2-STEP INSTRUCTIONS                      ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+I CANNOT upload files for you (I'm an AI, I don't have FTP access)
+
+BUT I've prepared EVERYTHING for you!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+STEP 1: Go to InfinityFree File Manager
+────────────────────────────────────────────────────────────
+
+1. Open browser
+2. Go to: https://app.infinityfree.com/
+3. Login
+4. Click "File Manager" button
+5. Open "htdocs" folder
+
+
+STEP 2: Upload Files
+────────────────────────────────────────────────────────────
+
+1. Click "Upload" button
+2. Select ALL files from "deploy-final" folder
+3. Click "Upload"
+4. Wait 5-10 minutes
+
+
+DONE! Visit: https://gyanbazaar.infinityfreeapp.com/
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+✅ I'VE ALREADY DONE:
+
+✅ Fixed config/database.php with YOUR credentials
+✅ Fixed config/config.php
+✅ Fixed .htaccess
+✅ All files are ready in deploy-final folder
+
+
+YOU JUST NEED TO:
+
+1. Upload files (5 minutes)
+2. Visit your site
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+YOUR CREDENTIALS (Already configured):
+
+Database Host: sql301.infinityfree.com
+Database User: if0_40371517
+Database Pass: Nitin9917
+Database Name: if0_40371517_gyanbazaar
+
+Site URL: https://gyanbazaar.infinityfreeapp.com/
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+THAT'S IT! Just upload and your site will work!
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║              Files are ready in: deploy-final/               ║
+║              Just upload them to: htdocs/                    ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝

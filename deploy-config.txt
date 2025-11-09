@@ -3,15 +3,15 @@
 
 [FTP]
 FTP_HOST=ftpupload.net
-FTP_USER=epiz_xxxxx
-FTP_PASS=your_password
+FTP_USER=if0_40371517
+FTP_PASS=Nitin@9917
 FTP_PORT=21
 
 [DATABASE]
-DB_HOST=sqlxxx.infinityfreeapp.com
-DB_USER=epiz_xxxxx
-DB_PASS=your_password
-DB_NAME=epiz_xxxxx_gyanbazaar
+DB_HOST=sql301.infinityfreeapp.com
+DB_USER=if0_40371517
+DB_PASS=Nitin@9917
+DB_NAME=if0_40371517_gyanbazaar
 
 [SITE]
-SITE_URL=https://yoursite.infinityfreeapp.com
+SITE_URL=https://gyanbazaar.infinityfreeapp.com

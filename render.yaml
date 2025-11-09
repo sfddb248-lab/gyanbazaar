@@ -1,0 +1,38 @@
+services:
+  # Web Service
+  - type: web
+    name: gyanbazaar
+    env: docker
+    plan: free
+    buildCommand: composer install --no-dev --optimize-autoloader
+    startCommand: php -S 0.0.0.0:$PORT -t .
+    envVars:
+      - key: PHP_VERSION
+        value: 8.1
+      - key: DB_HOST
+        fromDatabase:
+          name: gyanbazaar-db
+          property: host
+      - key: DB_USER
+        fromDatabase:
+          name: gyanbazaar-db
+          property: user
+      - key: DB_PASS
+        fromDatabase:
+          name: gyanbazaar-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: gyanbazaar-db
+          property: database
+      - key: DB_PORT
+        fromDatabase:
+          name: gyanbazaar-db
+          property: port
+
+databases:
+  # MySQL Database
+  - name: gyanbazaar-db
+    plan: free
+    databaseName: gyanbazaar
+    user: gyanbazaar_user

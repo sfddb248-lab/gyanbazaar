@@ -2,7 +2,8 @@
 session_start();
 
 // Site Configuration
-define('SITE_URL', 'http://localhost/GyanBazaar');
+// Use environment variable for SITE_URL (for Render/Railway deployment)
+define('SITE_URL', getenv('SITE_URL') ?: 'http://localhost/GyanBazaar');
 define('UPLOAD_PATH', __DIR__ . '/../assets/uploads/');
 define('UPLOAD_URL', SITE_URL . '/assets/uploads/');
 
@@ -18,7 +19,12 @@ define('DOWNLOAD_EXPIRY_DAYS', 365);
 define('MAX_DOWNLOAD_COUNT', 10);
 
 // Include database
-require_once __DIR__ . '/database.php';
+// Use Render/Railway database config if environment variables are set
+if (getenv('DB_HOST')) {
+    require_once __DIR__ . '/database.render.php';
+} else {
+    require_once __DIR__ . '/database.php';
+}
 require_once __DIR__ . '/../includes/functions.php';
 require_once __DIR__ . '/../includes/otp-functions.php';
 require_once __DIR__ . '/../includes/affiliate-functions.php';

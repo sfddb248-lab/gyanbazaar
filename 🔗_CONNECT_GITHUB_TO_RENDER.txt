@@ -1,0 +1,122 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              🔗 CONNECT GITHUB TO RENDER 🔗                         ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+You signed up with email, so you need to connect GitHub first!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1: LOGIN TO RENDER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://dashboard.render.com/
+2. Login with your email and password
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2: CONNECT GITHUB ACCOUNT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. In Render dashboard, click your profile icon (top right)
+2. Click "Account Settings"
+3. Look for "Connected Accounts" section
+4. Click "Connect GitHub"
+5. Authorize Render to access your GitHub
+6. Done!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3: CREATE WEB SERVICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Now you can connect your repository:
+
+1. Go back to dashboard
+2. Click "New +" → "Web Service"
+3. You'll see your GitHub repositories
+4. Find "gyanbazaar"
+5. Click "Connect"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ALTERNATIVE: DEPLOY FROM PUBLIC REPO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you don't want to connect GitHub:
+
+1. Make your repository public on GitHub
+2. In Render: "New +" → "Web Service"
+3. Click "Public Git repository"
+4. Enter: https://github.com/YOUR_USERNAME/gyanbazaar
+5. Click "Continue"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4: CONFIGURE SERVICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Settings:
+   • Name: gyanbazaar
+   • Environment: Docker
+   • Region: Singapore (or closest)
+   • Branch: main
+   • Plan: Free
+
+Click "Create Web Service"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5: ADD ENVIRONMENT VARIABLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After service is created:
+
+1. Click "Environment" tab
+2. Add these variables:
+
+   DB_HOST = (your database host)
+   DB_USER = (your database user)
+   DB_PASS = (your database password)
+   DB_NAME = gyanbazaar
+   DB_PORT = 3306
+   SITE_URL = https://gyanbazaar.onrender.com
+
+3. Click "Save Changes"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT'S YOUR GITHUB REPOSITORY URL?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Tell me your GitHub repository URL and I can help you deploy!
+
+Format: https://github.com/YOUR_USERNAME/gyanbazaar
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK STEPS SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Method 1: Connect GitHub (Recommended)
+   1. Account Settings → Connect GitHub
+   2. New + → Web Service
+   3. Select gyanbazaar repo
+   4. Deploy!
+
+Method 2: Public Repository
+   1. Make repo public on GitHub
+   2. New + → Web Service → Public Git repository
+   3. Enter repo URL
+   4. Deploy!
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              Connect GitHub or use public repo URL! 🔗              ║
+║                                                                      ║
+║              Then your site will deploy automatically! 🚀           ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝

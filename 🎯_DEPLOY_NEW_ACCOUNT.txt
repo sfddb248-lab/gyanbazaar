@@ -1,0 +1,167 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              🎯 DEPLOY WITH NEW GITHUB ACCOUNT 🎯                   ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+
+You changed GitHub accounts - Perfect! Let's deploy fresh!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1: CREATE REPOSITORY ON GITHUB (2 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://github.com/new
+
+2. Fill in:
+   • Repository name: gyanbazaar (or any name you want)
+   • Description: GyanBazaar - Digital Marketplace
+   • Visibility: ⚪ Public (IMPORTANT!)
+   • ☐ Add a README (leave unchecked)
+   • ☐ Add .gitignore (leave unchecked)
+
+3. Click "Create repository"
+
+4. Copy the repository URL shown (e.g., https://github.com/YOUR_USERNAME/gyanbazaar)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2: PUSH YOUR CODE (3 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open Command Prompt:
+
+cd C:\xampp\htdocs\GyanBazaar
+
+# Initialize git
+git init
+
+# Add all files
+git add .
+
+# Commit
+git commit -m "Initial commit - GyanBazaar"
+
+# Add your repository URL (replace YOUR_USERNAME and REPO_NAME)
+git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3: VERIFY ON GITHUB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Go to your repository URL and verify you see:
+   • Dockerfile
+   • composer.json
+   • index.php
+   • config/
+   • includes/
+   • All your files
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4: DEPLOY ON RENDER (5 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://dashboard.render.com/
+
+2. Click "New +" → "Web Service"
+
+3. Click "Public Git repository"
+
+4. Enter your repository URL:
+   https://github.com/YOUR_USERNAME/REPO_NAME
+
+5. Click "Continue"
+
+6. Configure:
+   • Name: gyanbazaar (or any name)
+   • Environment: Docker
+   • Region: Singapore (or closest)
+   • Branch: main
+   • Plan: Free
+
+7. Click "Create Web Service"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5: ADD ENVIRONMENT VARIABLES (2 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After deployment starts:
+
+1. Click "Environment" tab
+
+2. Add these variables:
+   DB_HOST = (your database host)
+   DB_USER = (your database user)
+   DB_PASS = (your database password)
+   DB_NAME = gyanbazaar
+   DB_PORT = 3306
+   SITE_URL = https://YOUR-SERVICE-NAME.onrender.com
+
+3. Click "Save Changes"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 6: SETUP DATABASE (5 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Use PlanetScale (Free MySQL):
+
+1. Go to: https://planetscale.com/
+2. Sign up with your new GitHub account
+3. Create database: gyanbazaar
+4. Get connection details
+5. Add to Render environment variables
+6. Import your database.sql
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YOUR SITE WILL BE LIVE!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   https://YOUR-SERVICE-NAME.onrender.com
+
+   With:
+   ✅ Free SSL (HTTPS)
+   ✅ Professional hosting
+   ✅ Auto-deploy from GitHub
+   ✅ Fresh start with new account!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Make repository PUBLIC (Render needs access)
+✅ Push ALL files to GitHub
+✅ Verify files are on GitHub before deploying
+✅ Use your NEW GitHub username in URLs
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TELL ME YOUR NEW GITHUB USERNAME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Once you tell me your new GitHub username and repository name,
+I'll create a custom deployment script just for you!
+
+Example:
+   Username: john_doe
+   Repository: gyanbazaar
+   URL: https://github.com/john_doe/gyanbazaar
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║              Tell me your new GitHub username! 📝                   ║
+║                                                                      ║
+║              Then I'll create a custom deployment script! 🚀        ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝

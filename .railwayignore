@@ -1,0 +1,14 @@
+# Railway ignore file
+.git
+.gitignore
+*.md
+*.txt
+*.bat
+*.py
+node_modules
+.env.local
+.DS_Store
+Thumbs.db
+deploy-final
+deploy-small
+deploy-package
