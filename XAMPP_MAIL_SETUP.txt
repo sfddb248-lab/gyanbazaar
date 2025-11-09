@@ -1,0 +1,148 @@
+═══════════════════════════════════════════════════════════
+  XAMPP EMAIL CONFIGURATION - QUICK GUIDE
+═══════════════════════════════════════════════════════════
+
+PROBLEM: OTP emails not sending from XAMPP
+
+SOLUTION: Configure XAMPP to use Gmail SMTP
+
+═══════════════════════════════════════════════════════════
+  STEP 1: EDIT php.ini
+═══════════════════════════════════════════════════════════
+
+File: C:\xampp\php\php.ini
+
+Find [mail function] section and change:
+
+SMTP=smtp.gmail.com
+smtp_port=587
+sendmail_from=your-email@gmail.com
+sendmail_path="\"C:\xampp\sendmail\sendmail.exe\" -t"
+
+═══════════════════════════════════════════════════════════
+  STEP 2: EDIT sendmail.ini
+═══════════════════════════════════════════════════════════
+
+File: C:\xampp\sendmail\sendmail.ini
+
+Update these lines:
+
+smtp_server=smtp.gmail.com
+smtp_port=587
+auth_username=your-email@gmail.com
+auth_password=your-16-char-app-password
+force_sender=your-email@gmail.com
+
+═══════════════════════════════════════════════════════════
+  STEP 3: GET GMAIL APP PASSWORD
+═══════════════════════════════════════════════════════════
+
+1. Go to: https://myaccount.google.com/security
+
+2. Enable "2-Step Verification" (if not enabled)
+
+3. Go to: https://myaccount.google.com/apppasswords
+
+4. Select app: "Mail"
+   Select device: "Windows Computer"
+
+5. Click "Generate"
+
+6. Copy the 16-character password (e.g., abcd efgh ijkl mnop)
+
+7. Paste in sendmail.ini (remove spaces: abcdefghijklmnop)
+
+═══════════════════════════════════════════════════════════
+  STEP 4: RESTART APACHE
+═══════════════════════════════════════════════════════════
+
+1. Open XAMPP Control Panel
+2. Click "Stop" for Apache
+3. Wait 2 seconds
+4. Click "Start" for Apache
+
+═══════════════════════════════════════════════════════════
+  STEP 5: TEST EMAIL
+═══════════════════════════════════════════════════════════
+
+1. Edit test-email-send.php
+   Change: $testEmail = 'your-email@gmail.com';
+
+2. Visit: http://localhost/DigitalKhazana/test-email-send.php
+
+3. Check result:
+   ✓ Green = Email sent successfully
+   ✗ Red = Configuration issue
+
+4. Check your email inbox
+
+═══════════════════════════════════════════════════════════
+  STEP 6: TEST OTP SIGNUP
+═══════════════════════════════════════════════════════════
+
+1. Go to: http://localhost/DigitalKhazana/signup.php
+
+2. Create new account
+
+3. Check email for OTP
+
+4. Enter OTP on verification page
+
+5. Account activated!
+
+═══════════════════════════════════════════════════════════
+  WORKAROUND (If Email Not Working)
+═══════════════════════════════════════════════════════════
+
+For development/testing, you can view OTPs in admin panel:
+
+1. Login as admin
+
+2. Go to: Admin → View OTPs
+
+3. See all active OTP codes
+
+4. Copy OTP and use for verification
+
+NOTE: Remove this page in production!
+
+═══════════════════════════════════════════════════════════
+  TROUBLESHOOTING
+═══════════════════════════════════════════════════════════
+
+ISSUE 1: "SMTP connect() failed"
+→ Check internet connection
+→ Verify SMTP server: smtp.gmail.com
+→ Verify port: 587
+
+ISSUE 2: "Authentication failed"
+→ Use App Password, not regular password
+→ Remove spaces from app password
+→ Enable 2-Step Verification first
+
+ISSUE 3: "Could not instantiate mail function"
+→ Check sendmail.exe exists: C:\xampp\sendmail\
+→ Verify path in php.ini
+→ Restart Apache
+
+ISSUE 4: Email goes to spam
+→ Check spam/junk folder
+→ Add sender to contacts
+→ Mark as "Not Spam"
+
+═══════════════════════════════════════════════════════════
+  ALTERNATIVE: Use Email Service
+═══════════════════════════════════════════════════════════
+
+For production, consider:
+
+→ SendGrid (free tier: 100 emails/day)
+→ Mailgun (free tier: 5,000 emails/month)
+→ Amazon SES (very cheap)
+→ SMTP2GO (free tier: 1,000 emails/month)
+
+═══════════════════════════════════════════════════════════
+
+DOCUMENTATION: See configure-xampp-mail.md for details
+
+═══════════════════════════════════════════════════════════

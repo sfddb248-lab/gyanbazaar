@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Modern Theme - Component Showcase</title>
+    
+    <!-- MDBootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Ultra Modern Theme -->
+    <link href="assets/css/ultra-modern-theme.css" rel="stylesheet">
+    <link href="assets/css/admin-ultra-theme.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background: #f7fafc;
+            padding: 2rem 0;
+        }
+        .showcase-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        .showcase-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .component-demo {
+            margin-bottom: 1.5rem;
+        }
+        .component-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5 animate-fade-in-down">
+            <h1 class="display-4 fw-bold gradient-text mb-3">
+                <i class="fas fa-palette"></i> Ultra Modern Theme Showcase
+            </h1>
+            <p class="lead text-muted">Explore all available components and animations</p>
+        </div>
+        
+        <!-- Animations Section -->
+        <div class="showcase-section animate-fade-in-up">
+            <h2 class="showcase-title">✨ Animations</h2>
+            
+            <div class="row">
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Fade In Up</div>
+                    <div class="modern-card p-3 animate-fade-in-up">
+                        <i class="fas fa-arrow-up me-2"></i> Fades in from bottom
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Scale In</div>
+                    <div class="modern-card p-3 animate-scale-in">
+                        <i class="fas fa-expand me-2"></i> Scales in
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Bounce In</div>
+                    <div class="modern-card p-3 animate-bounce-in">
+                        <i class="fas fa-basketball-ball me-2"></i> Bounces in
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Pulse (Continuous)</div>
+                    <div class="modern-card p-3 animate-pulse">
+                        <i class="fas fa-heart me-2"></i> Pulses continuously
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Float (Continuous)</div>
+                    <div class="modern-card p-3 animate-float">
+                        <i class="fas fa-cloud me-2"></i> Floats up and down
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Glow (Continuous)</div>
+                    <div class="modern-card p-3 animate-glow">
+                        <i class="fas fa-star me-2"></i> Glows continuously
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Buttons Section -->
+        <div class="showcase-section animate-fade-in-up delay-100">
+            <h2 class="showcase-title">🔘 Buttons</h2>
+            
+            <div class="row">
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Gradient Button</div>
+                    <button class="btn-gradient">
+                        <i class="fas fa-rocket"></i> Gradient Button
+                    </button>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Modern Button</div>
+                    <button class="btn-modern gradient-primary">
+                        <i class="fas fa-star"></i> Modern Button
+                    </button>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">3D Button</div>
+                    <button class="btn-3d">
+                        <i class="fas fa-cube"></i> 3D Button
+                    </button>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Glass Button</div>
+                    <button class="glass-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-gem"></i> Glass Button
+                    </button>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Neu Button</div>
+                    <button class="neu-button">
+                        <i class="fas fa-circle"></i> Neu Button
+                    </button>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">With Hover Lift</div>
+                    <button class="btn-gradient hover-lift">
+                        <i class="fas fa-arrow-up"></i> Hover Me
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cards Section -->
+        <div class="showcase-section animate-fade-in-up delay-200">
+            <h2 class="showcase-title">🎴 Cards</h2>
+            
+            <div class="row">
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Modern Card</div>
+                    <div class="modern-card p-4">
+                        <h5 class="fw-bold mb-2">Modern Card</h5>
+                        <p class="text-muted mb-0">Clean and elegant design</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Glass Card</div>
+                    <div class="glass-card p-4" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);">
+                        <h5 class="fw-bold mb-2 text-white">Glass Card</h5>
+                        <p class="text-white mb-0">Frosted glass effect</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Neu Card</div>
+                    <div class="neu-card">
+                        <h5 class="fw-bold mb-2">Neu Card</h5>
+                        <p class="text-muted mb-0">Soft UI design</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Hover Lift Card</div>
+                    <div class="modern-card modern-card-hover-lift p-4">
+                        <h5 class="fw-bold mb-2">Hover Lift</h5>
+                        <p class="text-muted mb-0">Lifts on hover</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Gradient Card</div>
+                    <div class="modern-card gradient-primary p-4">
+                        <h5 class="fw-bold mb-2 text-white">Gradient Card</h5>
+                        <p class="text-white mb-0">Beautiful gradient</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Animated Gradient</div>
+                    <div class="modern-card gradient-primary animate-gradient p-4">
+                        <h5 class="fw-bold mb-2 text-white">Animated</h5>
+                        <p class="text-white mb-0">Gradient shifts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Badges Section -->
+        <div class="showcase-section animate-fade-in-up delay-300">
+            <h2 class="showcase-title">🏷️ Badges</h2>
+            
+            <div class="component-demo">
+                <div class="component-label">Modern Badges</div>
+                <span class="badge-modern me-2 mb-2">Default</span>
+                <span class="badge-modern gradient-primary me-2 mb-2">Primary</span>
+                <span class="badge-modern gradient-success me-2 mb-2">Success</span>
+                <span class="badge-modern gradient-warning me-2 mb-2">Warning</span>
+                <span class="badge-modern gradient-secondary me-2 mb-2">Secondary</span>
+                <span class="badge-modern badge-glow me-2 mb-2">Glow Effect</span>
+            </div>
+        </div>
+        
+        <!-- Stats Cards Section -->
+        <div class="showcase-section animate-fade-in-up delay-400">
+            <h2 class="showcase-title">📊 Stats Cards</h2>
+            
+            <div class="row">
+                <div class="col-md-3 component-demo">
+                    <div class="stats-card">
+                        <div class="stats-card-icon primary">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stats-card-value">1,234</div>
+                        <div class="stats-card-label">Products</div>
+                        <span class="stats-card-trend up">
+                            <i class="fas fa-arrow-up"></i> 12%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 component-demo">
+                    <div class="stats-card">
+                        <div class="stats-card-icon success">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stats-card-value">5,678</div>
+                        <div class="stats-card-label">Users</div>
+                        <span class="stats-card-trend up">
+                            <i class="fas fa-arrow-up"></i> 8%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 component-demo">
+                    <div class="stats-card">
+                        <div class="stats-card-icon danger">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stats-card-value">910</div>
+                        <div class="stats-card-label">Orders</div>
+                        <span class="stats-card-trend down">
+                            <i class="fas fa-arrow-down"></i> 3%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 component-demo">
+                    <div class="stats-card">
+                        <div class="stats-card-icon warning">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stats-card-value">$12.5K</div>
+                        <div class="stats-card-label">Revenue</div>
+                        <span class="stats-card-trend up">
+                            <i class="fas fa-arrow-up"></i> 23%
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Forms Section -->
+        <div class="showcase-section animate-fade-in-up delay-500">
+            <h2 class="showcase-title">📝 Form Elements</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group-modern">
+                        <label class="form-label-modern">Modern Input</label>
+                        <input type="text" class="form-control-modern" placeholder="Enter text...">
+                    </div>
+                    
+                    <div class="form-group-modern">
+                        <label class="form-label-modern">Modern Select</label>
+                        <div class="select-modern">
+                            <select class="form-control-modern">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-modern">
+                        <label class="checkbox-modern">
+                            <input type="checkbox" checked>
+                            <span>Modern Checkbox</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group-modern">
+                        <label class="form-label-modern">Glass Input</label>
+                        <input type="text" class="input-glass" placeholder="Glass effect..." 
+                               style="background: rgba(102, 126, 234, 0.1);">
+                    </div>
+                    
+                    <div class="form-group-modern">
+                        <label class="form-label-modern">Radio Buttons</label>
+                        <div class="radio-modern">
+                            <input type="radio" name="radio" checked>
+                            <span>Option 1</span>
+                        </div>
+                        <div class="radio-modern">
+                            <input type="radio" name="radio">
+                            <span>Option 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Progress Bars Section -->
+        <div class="showcase-section animate-fade-in-up">
+            <h2 class="showcase-title">📈 Progress Bars</h2>
+            
+            <div class="component-demo">
+                <div class="component-label">75% Complete</div>
+                <div class="progress-modern">
+                    <div class="progress-modern-bar" style="width: 75%"></div>
+                </div>
+            </div>
+            
+            <div class="component-demo">
+                <div class="component-label">50% Complete</div>
+                <div class="progress-modern">
+                    <div class="progress-modern-bar" style="width: 50%"></div>
+                </div>
+            </div>
+            
+            <div class="component-demo">
+                <div class="component-label">25% Complete</div>
+                <div class="progress-modern">
+                    <div class="progress-modern-bar" style="width: 25%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Loading States Section -->
+        <div class="showcase-section animate-fade-in-up">
+            <h2 class="showcase-title">⏳ Loading States</h2>
+            
+            <div class="row">
+                <div class="col-md-4 component-demo text-center">
+                    <div class="component-label">Spinner</div>
+                    <div class="spinner mx-auto"></div>
+                </div>
+                
+                <div class="col-md-4 component-demo text-center">
+                    <div class="component-label">Dots</div>
+                    <div class="spinner-dots justify-content-center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 component-demo">
+                    <div class="component-label">Skeleton</div>
+                    <div class="skeleton mb-2" style="height: 20px;"></div>
+                    <div class="skeleton mb-2" style="height: 20px; width: 80%;"></div>
+                    <div class="skeleton" style="height: 20px; width: 60%;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alerts Section -->
+        <div class="showcase-section animate-fade-in-up">
+            <h2 class="showcase-title">🔔 Alerts</h2>
+            
+            <div class="alert-modern success">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Success!</strong> Your action was completed successfully.
+                </div>
+            </div>
+            
+            <div class="alert-modern danger">
+                <i class="fas fa-exclamation-circle"></i>
+                <div>
+                    <strong>Error!</strong> Something went wrong.
+                </div>
+            </div>
+            
+            <div class="alert-modern warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>Warning!</strong> Please review your input.
+                </div>
+            </div>
+            
+            <div class="alert-modern info">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>Info!</strong> Here's some helpful information.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hover Effects Section -->
+        <div class="showcase-section animate-fade-in-up">
+            <h2 class="showcase-title">🎯 Hover Effects</h2>
+            
+            <div class="row">
+                <div class="col-md-3 component-demo">
+                    <div class="component-label">Hover Lift</div>
+                    <div class="modern-card p-3 hover-lift text-center">
+                        <i class="fas fa-arrow-up fa-2x mb-2"></i>
+                        <p class="mb-0">Lifts up</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 component-demo">
+                    <div class="component-label">Hover Scale</div>
+                    <div class="modern-card p-3 hover-scale text-center">
+                        <i class="fas fa-expand fa-2x mb-2"></i>
+                        <p class="mb-0">Scales up</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 component-demo">
+                    <div class="component-label">Hover Rotate</div>
+                    <div class="modern-card p-3 hover-rotate text-center">
+                        <i class="fas fa-sync fa-2x mb-2"></i>
+                        <p class="mb-0">Rotates</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 component-demo">
+                    <div class="component-label">Hover Glow</div>
+                    <div class="modern-card p-3 hover-glow text-center">
+                        <i class="fas fa-star fa-2x mb-2"></i>
+                        <p class="mb-0">Glows</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="text-center mt-5 animate-fade-in-up">
+            <p class="text-muted">
+                <i class="fas fa-palette"></i> Ultra Modern Theme System v1.0
+            </p>
+            <p class="text-muted">
+                Read <strong>ULTRA_MODERN_THEME_GUIDE.md</strong> for complete documentation
+            </p>
+        </div>
+    </div>
+    
+    <!-- MDBootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.js"></script>
+</body>
+</html>

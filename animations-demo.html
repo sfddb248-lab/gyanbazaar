@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations & Glassmorphism Demo</title>
+    <link rel="stylesheet" href="assets/css/animations-glassmorphism.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .demo-box {
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .code-snippet {
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+        
+        .glass-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .demo-input-group {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        
+        .demo-input-group input {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-down">🎨 Animations & Glassmorphism Demo</h1>
+        
+        <!-- Fade Animations Section -->
+        <div class="section">
+            <h2 class="section-title fade-in">Fade Animations</h2>
+            
+            <div class="demo-grid">
+                <div class="demo-box glass-card fade-in">
+                    <div>
+                        <div>Fade In</div>
+                        <div class="code-snippet">.fade-in</div>
+                    </div>
+                </div>
+                
+                <div class="demo-box glass-card fade-up delay-100">
+                    <div>
+                        <div>Fade Up</div>
+                        <div class="code-snippet">.fade-up</div>
+                    </div>
+                </div>
+                
+                <div class="demo-box glass-card fade-down delay-200">
+                    <div>
+                        <div>Fade Down</div>
+                        <div class="code-snippet">.fade-down</div>
+                    </div>
+                </div>
+                
+                <div class="demo-box glass-card fade-left delay-300">
+                    <div>
+                        <div>Fade Left</div>
+                        <div class="code-snippet">.fade-left</div>
+                    </div>
+                </div>
+                
+                <div class="demo-box glass-card fade-right delay-400">
+                    <div>
+                        <div>Fade Right</div>
+                        <div class="code-snippet">.fade-right</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Glassmorphism Section -->
+        <div class="section">
+            <h2 class="section-title fade-in">Glassmorphism Effects</h2>
+            
+            <div class="glass-showcase">
+                <div class="glass-card fade-up">
+                    <h3 style="margin-bottom: 15px;">Glass Card</h3>
+                    <p>Standard frosted glass effect with hover animation</p>
+                    <div class="code-snippet">.glass-card</div>
+                </div>
+                
+                <div class="glass-card glass-light fade-up delay-100">
+                    <h3 style="margin-bottom: 15px;">Light Glass</h3>
+                    <p>Lighter variant with more transparency</p>
+                    <div class="code-snippet">.glass-light</div>
+                </div>
+                
+                <div class="glass-card glass-dark fade-up delay-200">
+                    <h3 style="margin-bottom: 15px;">Dark Glass</h3>
+                    <p>Darker variant for contrast</p>
+                    <div class="code-snippet">.glass-dark</div>
+                </div>
+                
+                <div class="glass-card glass-strong fade-up delay-300">
+                    <h3 style="margin-bottom: 15px;">Strong Blur</h3>
+                    <p>Enhanced blur effect for more depth</p>
+                    <div class="code-snippet">.glass-strong</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Colored Glass Section -->
+        <div class="section">
+            <h2 class="section-title fade-in">Colored Glass Variants</h2>
+            
+            <div class="demo-grid">
+                <div class="demo-box glass-card glass-primary fade-left">
+                    <div>
+                        <div>Primary Glass</div>
+                        <div class="code-snippet">.glass-primary</div>
+                    </div>
+                </div>
+                
+                <div class="demo-box glass-card glass-success fade-left delay-100">
+                    <div>
+                        <div>Success Glass</div>
+                        <div class="code-snippet">.glass-success</div>
+                    </div>
+                </div>
+                
+                <div class="demo-box glass-card glass-warning fade-left delay-200">
+                    <div>
+                        <div>Warning Glass</div>
+                        <div class="code-snippet">.glass-warning</div>
+                    </div>
+                </div>
+                
+                <div class="demo-box glass-card glass-danger fade-left delay-300">
+                    <div>
+                        <div>Danger Glass</div>
+                        <div class="code-snippet">.glass-danger</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Glass Buttons Section -->
+        <div class="section">
+            <h2 class="section-title fade-in">Glass Buttons</h2>
+            
+            <div class="btn-group fade-up">
+                <a href="#" class="glass-btn">Glass Button</a>
+                <a href="#" class="glass-btn glass-primary">Primary Button</a>
+                <a href="#" class="glass-btn glass-success">Success Button</a>
+                <a href="#" class="glass-btn glass-warning">Warning Button</a>
+                <a href="#" class="glass-btn glass-danger">Danger Button</a>
+            </div>
+            
+            <div class="code-snippet" style="max-width: 600px; margin: 20px auto;">
+                &lt;a href="#" class="glass-btn"&gt;Glass Button&lt;/a&gt;
+            </div>
+        </div>
+        
+        <!-- Glass Inputs Section -->
+        <div class="section">
+            <h2 class="section-title fade-in">Glass Inputs</h2>
+            
+            <div class="demo-input-group fade-up">
+                <input type="text" class="glass-input" placeholder="Glass Input Field">
+                <input type="email" class="glass-input" placeholder="Email Address">
+                <input type="password" class="glass-input" placeholder="Password">
+            </div>
+            
+            <div class="code-snippet" style="max-width: 600px; margin: 20px auto;">
+                &lt;input type="text" class="glass-input" placeholder="Glass Input"&gt;
+            </div>
+        </div>
+        
+        <!-- Glass Badges Section -->
+        <div class="section">
+            <h2 class="section-title fade-in">Glass Badges</h2>
+            
+            <div class="btn-group fade-up">
+                <span class="glass-badge">Default Badge</span>
+                <span class="glass-badge glass-primary">Primary</span>
+                <span class="glass-badge glass-success">Success</span>
+                <span class="glass-badge glass-warning">Warning</span>
+                <span class="glass-badge glass-danger">Danger</span>
+            </div>
+            
+            <div class="code-snippet" style="max-width: 600px; margin: 20px auto;">
+                &lt;span class="glass-badge"&gt;Badge&lt;/span&gt;
+            </div>
+        </div>
+        
+        <!-- Glass Modal Example -->
+        <div class="section">
+            <h2 class="section-title fade-in">Glass Modal</h2>
+            
+            <div class="glass-modal fade-up" style="max-width: 600px; margin: 0 auto;">
+                <h3 style="margin-bottom: 15px; color: white;">Modal Title</h3>
+                <p style="color: rgba(255,255,255,0.9); margin-bottom: 20px;">
+                    This is a glass modal with frosted glass effect. Perfect for overlays, dialogs, and popups.
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="glass-btn glass-primary">Confirm</a>
+                    <a href="#" class="glass-btn">Cancel</a>
+                </div>
+            </div>
+            
+            <div class="code-snippet" style="max-width: 600px; margin: 20px auto;">
+                &lt;div class="glass-modal"&gt;...&lt;/div&gt;
+            </div>
+        </div>
+        
+        <!-- Usage Guide -->
+        <div class="section">
+            <div class="glass-card fade-up" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="margin-bottom: 20px; color: white;">📖 Quick Usage Guide</h2>
+                
+                <div style="text-align: left; color: rgba(255,255,255,0.9);">
+                    <h3 style="margin: 20px 0 10px; color: white;">Fade Animations:</h3>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><code>.fade-in</code> - Simple fade in effect</li>
+                        <li><code>.fade-up</code> - Fade in from bottom</li>
+                        <li><code>.fade-down</code> - Fade in from top</li>
+                        <li><code>.fade-left</code> - Fade in from right</li>
+                        <li><code>.fade-right</code> - Fade in from left</li>
+                    </ul>
+                    
+                    <h3 style="margin: 20px 0 10px; color: white;">Animation Modifiers:</h3>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><code>.delay-100</code> to <code>.delay-500</code> - Add delays</li>
+                        <li><code>.duration-fast</code> - 0.3s duration</li>
+                        <li><code>.duration-normal</code> - 0.6s duration</li>
+                        <li><code>.duration-slow</code> - 1s duration</li>
+                    </ul>
+                    
+                    <h3 style="margin: 20px 0 10px; color: white;">Glassmorphism:</h3>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><code>.glass</code> - Base glass effect</li>
+                        <li><code>.glass-card</code> - Glass card with hover</li>
+                        <li><code>.glass-btn</code> - Glass button</li>
+                        <li><code>.glass-input</code> - Glass input field</li>
+                        <li><code>.glass-modal</code> - Glass modal/overlay</li>
+                        <li><code>.glass-badge</code> - Glass badge</li>
+                    </ul>
+                    
+                    <h3 style="margin: 20px 0 10px; color: white;">Color Variants:</h3>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><code>.glass-primary</code> - Blue tinted glass</li>
+                        <li><code>.glass-success</code> - Green tinted glass</li>
+                        <li><code>.glass-warning</code> - Yellow tinted glass</li>
+                        <li><code>.glass-danger</code> - Red tinted glass</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

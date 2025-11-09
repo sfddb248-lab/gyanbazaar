@@ -1,0 +1,19 @@
+# Deny direct access to video files
+# Videos can only be accessed through stream-video.php
+
+Order Deny,Allow
+Deny from all
+
+# Allow access from localhost only (for development)
+# Remove this in production
+Allow from 127.0.0.1
+Allow from ::1
+
+# Prevent directory listing
+Options -Indexes
+
+# Prevent hotlinking
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?localhost [NC]
+RewriteRule \.(mp4|webm|ogg|mov|avi)$ - [F,L]

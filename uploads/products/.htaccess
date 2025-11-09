@@ -1,0 +1,17 @@
+# Allow PDF viewing through the application
+# PDFs can be accessed for preview/viewing
+# Downloads should be handled through download.php
+
+<IfModule mod_headers.c>
+    # Prevent direct downloads, allow viewing
+    <FilesMatch "\.pdf$">
+        Header set Content-Disposition "inline"
+        Header set X-Content-Type-Options "nosniff"
+    </FilesMatch>
+</IfModule>
+
+# Block direct access to ZIP files
+<FilesMatch "\.zip$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>

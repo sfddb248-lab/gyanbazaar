@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Test</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet">
+    <style>
+        .test-card {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .btn {
+            position: relative;
+            z-index: 100 !important;
+            pointer-events: auto !important;
+            cursor: pointer !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <h3>Button Click Test</h3>
+        <p>Click the button below. It should redirect to Google.</p>
+        <a href="https://www.google.com" class="btn btn-primary" target="_blank">
+            Test Button
+        </a>
+        <hr>
+        <p>If button works here but not on products page, there's a CSS conflict.</p>
+    </div>
+</body>
+</html>

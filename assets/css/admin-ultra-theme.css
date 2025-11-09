@@ -1,0 +1,1158 @@
+/* ============================================
+   ADMIN ULTRA MODERN THEME
+   Advanced Dashboard UI & Animations
+   ============================================ */
+
+/* ============================================
+   1. ADMIN COLOR SCHEME
+   ============================================ */
+:root {
+    /* Admin Colors */
+    --admin-primary: #667eea;
+    --admin-secondary: #764ba2;
+    --admin-success: #00d4aa;
+    --admin-danger: #f5576c;
+    --admin-warning: #feca57;
+    --admin-info: #4facfe;
+    
+    /* Admin Gradients */
+    --admin-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --admin-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --admin-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --admin-gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --admin-gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    
+    /* Sidebar */
+    --sidebar-bg: #1a1d2e;
+    --sidebar-hover: #252a3f;
+    --sidebar-active: #667eea;
+    --sidebar-text: #a0aec0;
+    --sidebar-text-active: #ffffff;
+    
+    /* Dashboard */
+    --dashboard-bg: #f7fafc;
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================
+   2. ADMIN SIDEBAR
+   ============================================ */
+
+.admin-sidebar {
+    background: var(--sidebar-bg);
+    min-height: 100vh;
+    width: 260px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar.collapsed {
+    width: 80px;
+}
+
+.admin-sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-sidebar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--admin-gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar.collapsed .admin-sidebar-logo {
+    font-size: 1.2rem;
+}
+
+.sidebar-toggle {
+    background: transparent;
+    border: none;
+    color: var(--sidebar-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    color: white;
+    transform: rotate(180deg);
+}
+
+.admin-sidebar-menu {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.admin-sidebar-item {
+    margin: 0.25rem 0;
+}
+
+.admin-sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1.5rem;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--admin-gradient-1);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.admin-sidebar-link:hover,
+.admin-sidebar-link.active {
+    background: var(--sidebar-hover);
+    color: var(--sidebar-text-active);
+}
+
+.admin-sidebar-link.active::before {
+    transform: scaleY(1);
+}
+
+.admin-sidebar-link i {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    min-width: 24px;
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar-link:hover i {
+    transform: scale(1.1);
+}
+
+.admin-sidebar.collapsed .admin-sidebar-link span {
+    display: none;
+}
+
+.admin-sidebar.collapsed .admin-sidebar-link {
+    justify-content: center;
+}
+
+.admin-sidebar.collapsed .admin-sidebar-link i {
+    margin-right: 0;
+}
+
+/* Sidebar Badge */
+.sidebar-badge {
+    margin-left: auto;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--admin-gradient-2);
+    color: white;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   3. ADMIN HEADER/TOPBAR
+   ============================================ */
+
+.admin-topbar {
+    background: white;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar.collapsed ~ .admin-topbar {
+    left: 80px;
+}
+
+.admin-search {
+    position: relative;
+    width: 400px;
+}
+
+.admin-search input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+}
+
+.admin-search input:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.admin-search i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+.admin-topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-topbar-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f7fafc;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-topbar-icon:hover {
+    background: var(--admin-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.admin-topbar-icon .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: var(--admin-danger);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.admin-user-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background: #f7fafc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-user-menu:hover {
+    background: #e2e8f0;
+}
+
+.admin-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--admin-gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+/* ============================================
+   4. ADMIN MAIN CONTENT
+   ============================================ */
+
+.admin-main {
+    margin-left: 260px;
+    margin-top: 70px;
+    padding: 2rem;
+    background: var(--dashboard-bg);
+    min-height: calc(100vh - 70px);
+    transition: all 0.3s ease;
+    width: calc(100% - 260px);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.admin-sidebar.collapsed ~ .admin-main {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+/* Ensure container-fluid takes full width */
+.admin-main .container-fluid,
+.admin-main > div:first-child {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure all rows are visible */
+.admin-main .row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.admin-main [class*="col-"] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* Tables should be scrollable if too wide */
+.table-modern {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-modern table {
+    width: 100%;
+    min-width: 800px;
+}
+
+/* ============================================
+   5. DASHBOARD STATS CARDS
+   ============================================ */
+
+.stats-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--admin-gradient-1);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.stats-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stats-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.1;
+}
+
+.stats-card-icon i {
+    position: relative;
+    z-index: 1;
+}
+
+.stats-card-icon.primary {
+    background: var(--admin-gradient-1);
+    color: white;
+}
+
+.stats-card-icon.success {
+    background: var(--admin-gradient-4);
+    color: white;
+}
+
+.stats-card-icon.danger {
+    background: var(--admin-gradient-2);
+    color: white;
+}
+
+.stats-card-icon.warning {
+    background: var(--admin-gradient-5);
+    color: white;
+}
+
+.stats-card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+}
+
+.stats-card-label {
+    color: #718096;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.stats-card-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.stats-card-trend.up {
+    background: rgba(0, 212, 170, 0.1);
+    color: #00d4aa;
+}
+
+.stats-card-trend.down {
+    background: rgba(245, 87, 108, 0.1);
+    color: #f5576c;
+}
+
+/* ============================================
+   6. MODERN DATA TABLE
+   ============================================ */
+
+.table-modern {
+    background: white;
+    border-radius: 16px;
+    overflow-x: auto;
+    box-shadow: var(--card-shadow);
+    width: 100%;
+}
+
+.table-modern table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+
+.table-modern thead {
+    background: #f7fafc;
+}
+
+.table-modern th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.table-modern td {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    color: #2d3748;
+    white-space: nowrap;
+}
+
+.table-modern tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-modern tbody tr:hover {
+    background: #f7fafc;
+}
+
+/* Ensure table is scrollable on small screens */
+@media (max-width: 1200px) {
+    .table-modern {
+        overflow-x: scroll;
+    }
+}
+
+.table-action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 0.25rem;
+}
+
+.table-action-btn.edit {
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--admin-primary);
+}
+
+.table-action-btn.edit:hover {
+    background: var(--admin-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.table-action-btn.delete {
+    background: rgba(245, 87, 108, 0.1);
+    color: var(--admin-danger);
+}
+
+.table-action-btn.delete:hover {
+    background: var(--admin-danger);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   7. MODERN FORMS
+   ============================================ */
+
+.form-modern {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+}
+
+.form-group-modern {
+    margin-bottom: 1.5rem;
+}
+
+.form-label-modern {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.875rem;
+}
+
+.form-control-modern {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-control-modern:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-control-modern.error {
+    border-color: var(--admin-danger);
+}
+
+.form-error-message {
+    color: var(--admin-danger);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Custom Select */
+.select-modern {
+    position: relative;
+}
+
+.select-modern select {
+    appearance: none;
+    width: 100%;
+    padding: 0.875rem 3rem 0.875rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.select-modern::after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #a0aec0;
+}
+
+.select-modern select:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* Custom Checkbox */
+.checkbox-modern {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-modern input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    margin-right: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.checkbox-modern input[type="checkbox"]:checked {
+    background: var(--admin-gradient-1);
+    border-color: var(--admin-primary);
+}
+
+.checkbox-modern input[type="checkbox"]:checked::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.75rem;
+}
+
+/* Custom Radio */
+.radio-modern {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+}
+
+.radio-modern input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.radio-modern input[type="radio"]:checked {
+    border-color: var(--admin-primary);
+}
+
+.radio-modern input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--admin-gradient-1);
+}
+
+/* ============================================
+   8. CHARTS & GRAPHS CONTAINER
+   ============================================ */
+
+.chart-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+    box-shadow: var(--card-shadow-hover);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.chart-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.chart-filter {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chart-filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chart-filter-btn.active,
+.chart-filter-btn:hover {
+    background: var(--admin-gradient-1);
+    border-color: var(--admin-primary);
+    color: white;
+}
+
+/* ============================================
+   9. NOTIFICATIONS & ALERTS
+   ============================================ */
+
+.alert-modern {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    animation: slideInDown 0.5s ease;
+}
+
+.alert-modern i {
+    font-size: 1.5rem;
+}
+
+.alert-modern.success {
+    background: rgba(0, 212, 170, 0.1);
+    border-left: 4px solid #00d4aa;
+    color: #00d4aa;
+}
+
+.alert-modern.danger {
+    background: rgba(245, 87, 108, 0.1);
+    border-left: 4px solid #f5576c;
+    color: #f5576c;
+}
+
+.alert-modern.warning {
+    background: rgba(254, 202, 87, 0.1);
+    border-left: 4px solid #feca57;
+    color: #feca57;
+}
+
+.alert-modern.info {
+    background: rgba(79, 172, 254, 0.1);
+    border-left: 4px solid #4facfe;
+    color: #4facfe;
+}
+
+/* Toast Notification */
+.toast-modern {
+    position: fixed;
+    top: 90px;
+    right: 2rem;
+    min-width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: slideInRight 0.5s ease;
+    z-index: 9999;
+}
+
+.toast-modern.success {
+    border-left: 4px solid #00d4aa;
+}
+
+.toast-modern.error {
+    border-left: 4px solid #f5576c;
+}
+
+/* ============================================
+   10. BREADCRUMBS
+   ============================================ */
+
+.breadcrumb-modern {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-modern a {
+    color: #718096;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-modern a:hover {
+    color: var(--admin-primary);
+}
+
+.breadcrumb-modern .active {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.breadcrumb-modern i {
+    color: #cbd5e0;
+    font-size: 0.75rem;
+}
+
+/* ============================================
+   11. PAGINATION
+   ============================================ */
+
+.pagination-modern {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.pagination-modern a,
+.pagination-modern span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pagination-modern a:hover {
+    background: var(--admin-gradient-1);
+    border-color: var(--admin-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.pagination-modern .active {
+    background: var(--admin-gradient-1);
+    border-color: var(--admin-primary);
+    color: white;
+}
+
+/* ============================================
+   12. RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .admin-sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .admin-topbar,
+    .admin-main {
+        margin-left: 0;
+        left: 0;
+    }
+    
+    .admin-search {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-topbar {
+        padding: 0 1rem;
+    }
+    
+    .admin-search {
+        display: none;
+    }
+    
+    .admin-main {
+        padding: 1rem;
+    }
+    
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ============================================
+   13. LAYOUT FIXES & VISIBILITY
+   ============================================ */
+
+/* Ensure all content is visible */
+.admin-main * {
+    box-sizing: border-box;
+}
+
+/* Fix row and column spacing */
+.admin-main .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.admin-main [class*="col-"] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* Ensure cards don't overflow */
+.modern-card,
+.stats-card,
+.chart-card {
+    width: 100%;
+    overflow: visible;
+}
+
+/* Fix table responsive wrapper */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure text is visible */
+.admin-main h1,
+.admin-main h2,
+.admin-main h3,
+.admin-main h4,
+.admin-main h5,
+.admin-main h6,
+.admin-main p,
+.admin-main span,
+.admin-main td,
+.admin-main th {
+    color: inherit;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Fix notification bell cursor */
+.admin-topbar-icon {
+    cursor: pointer;
+    user-select: none;
+}
+
+.admin-topbar-icon:hover {
+    transform: translateY(-2px);
+}
+
+/* Toast notification animation */
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Ensure modals are visible */
+.modal {
+    z-index: 9999;
+}
+
+.modal-backdrop {
+    z-index: 9998;
+}
+
+/* Fix button states */
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Ensure all text is readable */
+.text-muted {
+    color: #718096 !important;
+}
+
+.text-primary {
+    color: var(--admin-primary) !important;
+}
+
+.text-success {
+    color: var(--admin-success) !important;
+}
+
+.text-danger {
+    color: var(--admin-danger) !important;
+}
+
+.text-warning {
+    color: var(--admin-warning) !important;
+}
+
+/* Fix list group in modal */
+.list-group-item {
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background: #f7fafc;
+    transform: translateX(5px);
+}
+
+.list-group-item h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.list-group-item p {
+    margin-bottom: 0;
+    color: #718096;
+    font-size: 0.875rem;
+}
+
+/* Ensure proper spacing */
+.mb-1 { margin-bottom: 0.25rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mb-5 { margin-bottom: 3rem !important; }
+
+.mt-1 { margin-top: 0.25rem !important; }
+.mt-2 { margin-top: 0.5rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt-5 { margin-top: 3rem !important; }
+
+.p-1 { padding: 0.25rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-3 { padding: 1rem !important; }
+.p-4 { padding: 1.5rem !important; }
+.p-5 { padding: 3rem !important; }
+
+/* Fix flexbox layouts */
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+/* Ensure proper width */
+.w-100 {
+    width: 100% !important;
+}
+
+/* Fix text alignment */
+.text-center {
+    text-align: center !important;
+}
+
+.text-end {
+    text-align: right !important;
+}
+
+.text-start {
+    text-align: left !important;
+}
+
+/* Fix font weights */
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-normal {
+    font-weight: 400 !important;
+}
+
+/* Ensure visibility of all elements */
+* {
+    visibility: visible !important;
+}
+
+/* Fix z-index stacking */
+.admin-sidebar {
+    z-index: 1000;
+}
+
+.admin-topbar {
+    z-index: 999;
+}
+
+.admin-main {
+    z-index: 1;
+}

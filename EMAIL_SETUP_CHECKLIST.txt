@@ -1,0 +1,128 @@
+═══════════════════════════════════════════════════════════════
+  📧 XAMPP EMAIL SETUP - QUICK CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+⏱️ Time Required: 5 minutes
+🎯 Goal: Enable OTP email sending in DigitalKhazana
+
+───────────────────────────────────────────────────────────────
+STEP 1: GET GMAIL APP PASSWORD (2 minutes)
+───────────────────────────────────────────────────────────────
+
+□ Go to: https://myaccount.google.com/security
+□ Enable "2-Step Verification" (if not already on)
+□ Click "App passwords"
+□ Select: Mail + Windows Computer
+□ Click "Generate"
+□ Copy the 16-character password (example: abcd efgh ijkl mnop)
+□ Remove spaces: abcdefghijklmnop
+
+───────────────────────────────────────────────────────────────
+STEP 2: CONFIGURE SENDMAIL.INI (1 minute)
+───────────────────────────────────────────────────────────────
+
+□ Open: C:\xampp\sendmail\sendmail.ini
+□ Find and update these lines:
+
+   smtp_server=smtp.gmail.com
+   smtp_port=587
+   auth_username=YOUR-EMAIL@gmail.com
+   auth_password=YOUR-16-CHAR-APP-PASSWORD
+   force_sender=YOUR-EMAIL@gmail.com
+
+□ Replace YOUR-EMAIL@gmail.com with your Gmail
+□ Replace YOUR-16-CHAR-APP-PASSWORD with app password (no spaces)
+□ Save the file
+
+───────────────────────────────────────────────────────────────
+STEP 3: CONFIGURE PHP.INI (1 minute)
+───────────────────────────────────────────────────────────────
+
+□ Open: C:\xampp\php\php.ini
+□ Find [mail function] section
+□ Update these lines:
+
+   SMTP = smtp.gmail.com
+   smtp_port = 587
+   sendmail_from = YOUR-EMAIL@gmail.com
+   sendmail_path = "C:\xampp\sendmail\sendmail.exe -t"
+
+□ Replace YOUR-EMAIL@gmail.com with your Gmail
+□ Save the file
+
+───────────────────────────────────────────────────────────────
+STEP 4: RESTART APACHE (30 seconds)
+───────────────────────────────────────────────────────────────
+
+□ Open XAMPP Control Panel
+□ Click "Stop" on Apache
+□ Wait 2 seconds
+□ Click "Start" on Apache
+□ Apache should show "Running" in green
+
+───────────────────────────────────────────────────────────────
+STEP 5: TEST EMAIL (30 seconds)
+───────────────────────────────────────────────────────────────
+
+□ Visit: http://localhost/DigitalKhazana/test-email-send.php
+□ Enter your email address
+□ Click "Send Test Email"
+□ Check your inbox (and spam folder)
+□ Look for email from DigitalKhazana
+
+───────────────────────────────────────────────────────────────
+STEP 6: TEST OTP SYSTEM (1 minute)
+───────────────────────────────────────────────────────────────
+
+□ Visit: http://localhost/DigitalKhazana/signup.php
+□ Create a new account
+□ Check email for OTP code
+□ Enter OTP on verification page
+□ Account should be activated!
+
+═══════════════════════════════════════════════════════════════
+✅ SUCCESS INDICATORS
+═══════════════════════════════════════════════════════════════
+
+✓ Test email received in inbox
+✓ OTP email received during signup
+✓ No errors in XAMPP error logs
+✓ Users can verify accounts with OTP
+
+═══════════════════════════════════════════════════════════════
+❌ TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+Problem: "Could not connect to SMTP host"
+Solution: Check internet connection, verify smtp.gmail.com accessible
+
+Problem: "Authentication failed"
+Solution: Verify app password is correct (no spaces), 2-Step enabled
+
+Problem: Email not received
+Solution: Check spam folder, verify email address is correct
+
+Problem: Still not working
+Solution: Check logs at C:\xampp\sendmail\error.log
+
+═══════════════════════════════════════════════════════════════
+📚 DETAILED GUIDES
+═══════════════════════════════════════════════════════════════
+
+• Complete Setup: CONFIGURE_EMAIL_NOW.md
+• Test Tool: test-email-send.php
+• OTP Guide: OTP_VERIFICATION_GUIDE.md
+
+═══════════════════════════════════════════════════════════════
+🎉 AFTER SETUP
+═══════════════════════════════════════════════════════════════
+
+Once email is working:
+✓ OTP emails sent automatically
+✓ Users receive verification codes
+✓ Professional email notifications
+✓ Secure account activation
+
+═══════════════════════════════════════════════════════════════
+
+Need help? Check CONFIGURE_EMAIL_NOW.md for detailed instructions!

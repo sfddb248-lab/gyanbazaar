@@ -1,0 +1,41 @@
+# PHP Configuration for Large Video Uploads (500MB)
+
+To enable 500MB video uploads, you need to update your php.ini file:
+
+## Location of php.ini:
+- XAMPP: C:\xampp\php\php.ini
+- WAMP: C:\wamp\bin\php\phpX.X.X\php.ini
+
+## Required Changes:
+
+1. Open php.ini in a text editor (as Administrator)
+
+2. Find and update these values:
+
+upload_max_filesize = 500M
+post_max_size = 550M
+max_execution_time = 600
+max_input_time = 600
+memory_limit = 512M
+
+3. Save the file
+
+4. Restart Apache server
+
+## Verify Changes:
+Create a file called phpinfo.php with this content:
+<?php phpinfo(); ?>
+
+Then visit: http://localhost/phpinfo.php
+Search for "upload_max_filesize" to verify the changes.
+
+## Alternative: .htaccess Method
+If you can't edit php.ini, add this to your .htaccess file:
+
+php_value upload_max_filesize 500M
+php_value post_max_size 550M
+php_value max_execution_time 600
+php_value max_input_time 600
+php_value memory_limit 512M
+
+Note: This only works if your server allows .htaccess overrides.

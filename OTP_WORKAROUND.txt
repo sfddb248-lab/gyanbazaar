@@ -1,0 +1,86 @@
+═══════════════════════════════════════════════════════════
+  OTP VERIFICATION - DEVELOPMENT WORKAROUND
+═══════════════════════════════════════════════════════════
+
+PROBLEM: OTP emails not sending in XAMPP
+
+TEMPORARY SOLUTION: View OTPs in Admin Panel
+
+═══════════════════════════════════════════════════════════
+  HOW TO USE (DEVELOPMENT ONLY)
+═══════════════════════════════════════════════════════════
+
+STEP 1: User Signs Up
+→ Go to signup page
+→ Fill in details
+→ Submit form
+→ Redirected to OTP verification page
+
+STEP 2: Admin Views OTP
+→ Login to admin panel
+→ Go to: Admin → View OTPs
+→ Find the user's email
+→ Copy the 6-digit OTP code
+
+STEP 3: User Enters OTP
+→ Paste OTP in verification page
+→ Click "Verify OTP"
+→ Account activated!
+
+═══════════════════════════════════════════════════════════
+  ADMIN PANEL - VIEW OTPs
+═══════════════════════════════════════════════════════════
+
+Location: http://localhost/DigitalKhazana/admin/view-otps.php
+
+Shows:
+✓ All active OTP codes
+✓ User names and emails
+✓ Expiry times
+✓ Status (pending/expired)
+✓ Copy button for each OTP
+
+═══════════════════════════════════════════════════════════
+  IMPORTANT NOTES
+═══════════════════════════════════════════════════════════
+
+⚠️ This is for DEVELOPMENT ONLY!
+
+✓ OTP verification is still mandatory
+✓ Fake emails cannot be used
+✓ Users must verify to login
+✓ Full security maintained
+
+✗ Admin page shows OTPs (for testing)
+✗ Remove admin/view-otps.php in production
+✗ Configure real email for production
+
+═══════════════════════════════════════════════════════════
+  FOR PRODUCTION
+═══════════════════════════════════════════════════════════
+
+1. Configure email properly (see XAMPP_MAIL_SETUP.txt)
+2. Test email sending works
+3. Delete admin/view-otps.php
+4. OTPs will be sent via email
+5. No workaround needed
+
+═══════════════════════════════════════════════════════════
+  CONFIGURE EMAIL NOW
+═══════════════════════════════════════════════════════════
+
+Follow: XAMPP_MAIL_SETUP.txt
+
+Quick steps:
+1. Edit php.ini
+2. Edit sendmail.ini  
+3. Get Gmail App Password
+4. Restart Apache
+5. Test with test-email-send.php
+
+═══════════════════════════════════════════════════════════
+
+OTP verification is PERMANENT and MANDATORY.
+This workaround just helps during development.
+
+═══════════════════════════════════════════════════════════

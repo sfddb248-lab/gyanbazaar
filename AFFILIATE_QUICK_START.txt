@@ -1,0 +1,220 @@
+╔══════════════════════════════════════════════════════════════════╗
+║          AFFILIATE MARKETING SYSTEM - QUICK START GUIDE          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🚀 SETUP IN 3 STEPS:
+
+STEP 1: RUN SETUP
+─────────────────
+Open in browser: http://localhost/DigitalKhazana/setup-affiliate-system.php
+
+This will:
+✓ Create all database tables
+✓ Insert default settings
+✓ Set up MLM structure
+✓ Configure commission tracking
+
+
+STEP 2: CONFIGURE SETTINGS
+───────────────────────────
+Go to: Admin Panel → Affiliate Settings
+http://localhost/DigitalKhazana/admin/affiliate-settings.php
+
+Configure:
+• Default commission rate (e.g., 10%)
+• Minimum payout amount (e.g., ₹500)
+• Enable/disable MLM
+• Set MLM levels and rates
+• Cookie duration
+
+
+STEP 3: INTEGRATE TRACKING
+───────────────────────────
+Open: http://localhost/DigitalKhazana/integrate-affiliate-tracking.php
+
+Copy and paste code snippets into:
+1. index.php - Track referral clicks
+2. signup.php - Track new signups
+3. checkout.php - Create commissions
+4. includes/header.php - Add menu links
+5. admin/includes/admin-header.php - Add admin menu
+
+
+═══════════════════════════════════════════════════════════════════
+
+📋 FEATURES INCLUDED:
+
+✅ Unique Referral Links
+   - Each affiliate gets unique code (e.g., ABC12345)
+   - Format: yoursite.com/?ref=ABC12345
+
+✅ Commission Tracking
+   - Percentage-based (e.g., 10% of sale)
+   - Flat-rate (e.g., ₹50 per sale)
+   - Individual rates per affiliate
+
+✅ Affiliate Dashboard
+   - Real-time earnings
+   - Performance metrics
+   - Referral link management
+   - Commission history
+
+✅ Payout Management
+   - Request payouts
+   - Multiple payment methods
+   - Admin approval workflow
+   - Transaction tracking
+
+✅ Multi-Level Marketing (MLM)
+   - Up to 5 levels
+   - Configurable rates per level
+   - Automatic parent-child tracking
+
+✅ Promotional Materials
+   - Banners
+   - Email templates
+   - Social media posts
+   - Download tracking
+
+
+═══════════════════════════════════════════════════════════════════
+
+🔗 IMPORTANT LINKS:
+
+User Pages:
+• Affiliate Dashboard: /affiliate-dashboard.php
+• Request Payout: /affiliate-payout.php
+• Promotional Materials: /affiliate-materials.php
+
+Admin Pages:
+• Manage Affiliates: /admin/affiliates.php
+• View Commissions: /admin/affiliate-commissions.php
+• Process Payouts: /admin/affiliate-payouts.php
+• Upload Materials: /admin/affiliate-materials.php
+• System Settings: /admin/affiliate-settings.php
+
+Testing:
+• Test System: /test-affiliate-system.php
+• Integration Guide: /integrate-affiliate-tracking.php
+
+
+═══════════════════════════════════════════════════════════════════
+
+💡 HOW IT WORKS:
+
+FOR USERS (AFFILIATES):
+1. Register and go to Affiliate Dashboard
+2. Click "Become an Affiliate"
+3. Get unique referral link
+4. Share link on social media, email, etc.
+5. Earn commission when someone purchases
+6. Request payout when minimum reached
+
+FOR ADMIN:
+1. Approve/reject affiliate applications
+2. Set individual commission rates
+3. Approve commissions
+4. Process payout requests
+5. Upload promotional materials
+
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 EXAMPLE USAGE:
+
+Scenario 1: Simple 10% Commission
+─────────────────────────────────
+1. User becomes affiliate
+2. Gets link: yoursite.com/?ref=ABC12345
+3. Shares on Facebook
+4. Friend clicks link and buys ₹1000 product
+5. Affiliate earns ₹100 (10%)
+6. Requests payout when balance reaches ₹500
+
+Scenario 2: MLM (3 Levels)
+──────────────────────────
+1. User A refers User B (Level 1)
+2. User B refers User C (Level 2)
+3. User C makes ₹1000 purchase
+4. User B earns ₹100 (10% Level 1)
+5. User A earns ₹50 (5% Level 2)
+
+
+═══════════════════════════════════════════════════════════════════
+
+⚙️ DEFAULT SETTINGS:
+
+Affiliate Enabled: Yes
+Default Commission: 10% (Percentage)
+Minimum Payout: ₹500
+MLM Enabled: Yes
+MLM Levels: 3
+  - Level 1: 10%
+  - Level 2: 5%
+  - Level 3: 2%
+Cookie Duration: 30 days
+Auto-Approve: No
+
+
+═══════════════════════════════════════════════════════════════════
+
+✅ VERIFICATION CHECKLIST:
+
+□ Run setup-affiliate-system.php
+□ All database tables created
+□ Configure affiliate settings
+□ Add tracking code to index.php
+□ Add tracking code to signup.php
+□ Add commission code to checkout.php
+□ Add menu items to navigation
+□ Upload promotional materials
+□ Test with referral link
+□ Make test purchase
+□ Verify commission created
+□ Test payout request
+
+
+═══════════════════════════════════════════════════════════════════
+
+🆘 TROUBLESHOOTING:
+
+Problem: Tables not created
+Solution: Run setup-affiliate-system.php again
+
+Problem: Functions not found
+Solution: Check config.php includes affiliate-functions.php
+
+Problem: Commissions not created
+Solution: Verify checkout.php integration code
+
+Problem: Referral link not tracking
+Solution: Check index.php has tracking code
+
+Problem: Can't request payout
+Solution: Check minimum payout amount in settings
+
+
+═══════════════════════════════════════════════════════════════════
+
+📞 NEED HELP?
+
+1. Check test-affiliate-system.php for system status
+2. Review AFFILIATE_SYSTEM_COMPLETE.md for full docs
+3. Use integrate-affiliate-tracking.php for code snippets
+
+
+═══════════════════════════════════════════════════════════════════
+
+🎉 YOU'RE ALL SET!
+
+Your affiliate marketing system is ready to use with all features:
+✓ Unique referral links
+✓ Commission tracking
+✓ Affiliate dashboard
+✓ Payout management
+✓ Multi-level program
+✓ Promotional materials
+
+Start by running: setup-affiliate-system.php
+
+═══════════════════════════════════════════════════════════════════

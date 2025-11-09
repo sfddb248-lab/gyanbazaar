@@ -1,0 +1,113 @@
+╔══════════════════════════════════════════════════════════════╗
+║     COURSE VIDEO SYSTEM - QUICK SETUP CHECKLIST             ║
+╚══════════════════════════════════════════════════════════════╝
+
+□ STEP 1: DATABASE SETUP
+  □ Open phpMyAdmin (http://localhost/phpmyadmin)
+  □ Select your database (digitalkhazana)
+  □ Click "Import" or "SQL" tab
+  □ Run the SQL from: update-database-courses.sql
+  □ Verify tables created:
+    - course_sections
+    - course_videos
+    - user_video_progress
+
+□ STEP 2: PHP CONFIGURATION (Choose one method)
+  
+  METHOD A - Edit php.ini (Recommended):
+  □ Open: C:\xampp\php\php.ini
+  □ Find and change these values:
+    upload_max_filesize = 500M
+    post_max_size = 550M
+    max_execution_time = 600
+    max_input_time = 600
+    memory_limit = 512M
+  □ Save file
+  □ Restart Apache from XAMPP Control Panel
+  
+  METHOD B - Use .htaccess (Already done):
+  □ The .htaccess file is already updated
+  □ Just restart Apache
+
+□ STEP 3: VERIFY CONFIGURATION
+  □ Create file: phpinfo.php with content: <?php phpinfo(); ?>
+  □ Visit: http://localhost/DigitalKhazana/phpinfo.php
+  □ Search for "upload_max_filesize"
+  □ Should show: 500M
+  □ Delete phpinfo.php after checking
+
+□ STEP 4: CREATE UPLOAD FOLDERS
+  □ Navigate to: assets/uploads/
+  □ Create folder: courses
+  □ Inside courses, create: videos
+  □ Inside courses, create: notes
+  □ Set permissions to 777 (if on Linux)
+
+□ STEP 5: TEST THE SYSTEM
+  □ Login to admin panel: http://localhost/DigitalKhazana/admin
+  □ Go to Products
+  □ Create a new product with type "Course"
+  □ Click the video icon (🎥) next to the course
+  □ Add a section (e.g., "Introduction")
+  □ Click "Upload Video"
+  □ Upload a test video (under 500MB)
+  □ Add optional PDF notes
+  □ Save and verify
+
+□ STEP 6: TEST USER EXPERIENCE
+  □ Create a test order for the course (or mark as completed in DB)
+  □ Login as regular user
+  □ Go to "My Orders"
+  □ Click "View Course"
+  □ Verify video plays
+  □ Test progress tracking
+  □ Test notes download
+
+╔══════════════════════════════════════════════════════════════╗
+║                    QUICK REFERENCE                           ║
+╚══════════════════════════════════════════════════════════════╝
+
+Admin URLs:
+- Products: /admin/products.php
+- Course Videos: /admin/course-videos.php?product=ID
+- Upload Video: /admin/upload-course-video.php?section=ID&product=ID
+
+User URLs:
+- Course Viewer: /course-viewer.php?id=PRODUCT_ID
+
+Max Upload Size: 500MB per video
+Supported Formats: MP4, WebM, OGG, MOV, AVI
+Notes Format: PDF only
+
+╔══════════════════════════════════════════════════════════════╗
+║                  TROUBLESHOOTING                             ║
+╚══════════════════════════════════════════════════════════════╝
+
+❌ Upload fails / timeout:
+  ✓ Check php.ini settings
+  ✓ Restart Apache
+  ✓ Try smaller file first
+  ✓ Check error logs
+
+❌ Video won't play:
+  ✓ Use MP4 format
+  ✓ Check file exists in uploads/courses/videos/
+  ✓ Try different browser
+
+❌ Can't access course:
+  ✓ Verify user purchased course
+  ✓ Check order payment_status = 'completed'
+  ✓ Check product_type = 'course'
+
+❌ Progress not saving:
+  ✓ Check browser console for errors
+  ✓ Verify AJAX endpoints working
+  ✓ Check database tables exist
+
+╔══════════════════════════════════════════════════════════════╗
+║                    ALL DONE! 🎉                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+Your course video system is ready to use!
+
+For detailed documentation, see: COURSE_VIDEO_SYSTEM.md

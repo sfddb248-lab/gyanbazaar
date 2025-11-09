@@ -1,0 +1,305 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║         ✅ MLM LEVEL-WISE BREAKDOWN - COMPLETE! ✅                    ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+
+🎉 LEVEL-WISE REFERRAL & EARNINGS TABLE ADDED!
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+📊 TABLE STRUCTURE
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ HEADER: Level-wise Referral & Earnings Breakdown                   │
+│         Multi-Level Marketing (MLM) Performance                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌────────┬──────┬───────────┬─────────────┬──────────┬─────────┬──────┐
+│ Level  │ Rate │ Referrals │ Commissions │  Total   │ Pending │ Paid │
+├────────┼──────┼───────────┼─────────────┼──────────┼─────────┼──────┤
+│ Level 1│ 10%  │    25     │     45      │ ₹4,500   │ ₹1,200  │₹3,300│
+│ Level 2│  5%  │    15     │     28      │ ₹1,400   │  ₹400   │₹1,000│
+│ Level 3│  2%  │     8     │     12      │  ₹240    │   ₹80   │ ₹160 │
+├────────┼──────┼───────────┼─────────────┼──────────┼─────────┼──────┤
+│ TOTAL  │      │    48     │     85      │ ₹6,140   │ ₹1,680  │₹4,460│
+└────────┴──────┴───────────┴─────────────┴──────────┴─────────┴──────┘
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ FOOTER INSIGHTS:                                                    │
+│ • Average per Level: ₹2,046.67                                      │
+│ • Best Performing Level: Level 1                                    │
+│ • MLM Depth: 3 Levels                                               │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+📋 COLUMNS EXPLAINED
+
+1. LEVEL
+   • Badge with level number (1-5)
+   • Color-coded:
+     - Level 1: Blue (Primary)
+     - Level 2: Green (Success)
+     - Level 3: Cyan (Info)
+     - Level 4: Orange (Warning)
+     - Level 5: Red (Danger)
+   • Shows "Direct Referrals" for Level 1
+   • Shows "Indirect (Level X)" for others
+
+2. COMMISSION RATE
+   • Percentage earned at this level
+   • Example: 10%, 5%, 2%
+   • Configurable in admin settings
+
+3. REFERRALS
+   • Number of users at this level
+   • Level 1: Direct referrals
+   • Level 2+: Indirect through MLM
+   • Icon: 👥 Users
+
+4. COMMISSIONS
+   • Number of commission transactions
+   • Count of all commissions at this level
+   • Icon: 📋 Receipt
+
+5. TOTAL EARNINGS
+   • All-time earnings from this level
+   • Sum of all commissions
+   • Color-coded by level
+
+6. PENDING
+   • Unpaid commission amount
+   • Status: 'pending' or 'approved'
+   • Badge: Warning (Yellow)
+
+7. PAID
+   • Completed payout amount
+   • Status: 'paid'
+   • Badge: Success (Green)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎨 VISUAL DESIGN
+
+HEADER:
+• Gradient primary background
+• White text
+• Icon: 🏆 Layer Group
+• Subtitle: "Multi-Level Marketing (MLM) Performance"
+
+TABLE ROWS:
+• Hover effect: Light background
+• Alternating row colors
+• Smooth transitions
+• Badge indicators
+
+TOTAL ROW:
+• Bold text
+• Light gray background
+• Larger font size
+• Calculator icon
+
+FOOTER:
+• Light background
+• 3 columns with insights
+• Small text labels
+• Bold values
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔢 DATA CALCULATIONS
+
+LEVEL 1 REFERRALS (Direct):
+  SELECT COUNT(DISTINCT referred_user_id) 
+  FROM affiliate_referrals 
+  WHERE affiliate_id = ? 
+  AND referred_user_id IS NOT NULL
+
+LEVEL 2+ REFERRALS (Indirect):
+  SELECT COUNT(*) 
+  FROM affiliate_mlm_structure 
+  WHERE parent_affiliate_id = ? 
+  AND level = ?
+
+EARNINGS BY LEVEL:
+  SELECT 
+    COUNT(*) as commission_count,
+    SUM(commission_amount) as total_earnings,
+    SUM(CASE WHEN status = 'pending' 
+        THEN commission_amount ELSE 0 END) as pending,
+    SUM(CASE WHEN status = 'paid' 
+        THEN commission_amount ELSE 0 END) as paid
+  FROM affiliate_commissions 
+  WHERE affiliate_id = ? AND level = ?
+
+BEST PERFORMING LEVEL:
+  Find level with MAX(total_earnings)
+
+AVERAGE PER LEVEL:
+  SUM(all_earnings) / COUNT(levels)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+💡 INSIGHTS PROVIDED
+
+1. AVERAGE PER LEVEL
+   • Mean earnings across all levels
+   • Helps understand distribution
+   • Formula: Total ÷ Number of Levels
+
+2. BEST PERFORMING LEVEL
+   • Level with highest earnings
+   • Identifies strongest tier
+   • Usually Level 1 (direct)
+
+3. MLM DEPTH
+   • Number of active levels
+   • Shows network depth
+   • Maximum: 5 levels
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 USER BENEFITS
+
+✓ CLEAR MLM STRUCTURE
+  • See network at each level
+  • Understand hierarchy
+  • Track growth by tier
+
+✓ EARNINGS TRANSPARENCY
+  • Know exactly what each level earns
+  • See pending vs paid breakdown
+  • Identify revenue sources
+
+✓ PERFORMANCE ANALYSIS
+  • Compare levels side-by-side
+  • Find best performing tier
+  • Optimize referral strategy
+
+✓ FINANCIAL PLANNING
+  • Track pending payouts by level
+  • See paid amounts per tier
+  • Plan withdrawal timing
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+📱 RESPONSIVE DESIGN
+
+DESKTOP (>768px):
+• Full table visible
+• All columns displayed
+• Optimal spacing
+
+TABLET (768px):
+• Horizontal scroll enabled
+• Table maintains structure
+• Touch-friendly
+
+MOBILE (<768px):
+• Scrollable table
+• Pinch to zoom
+• Compact view
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎨 COLOR SCHEME
+
+LEVEL BADGES:
+• Level 1: #0d6efd (Blue)
+• Level 2: #198754 (Green)
+• Level 3: #0dcaf0 (Cyan)
+• Level 4: #ffc107 (Orange)
+• Level 5: #dc3545 (Red)
+
+STATUS BADGES:
+• Pending: #ffc107 (Warning/Yellow)
+• Paid: #198754 (Success/Green)
+
+HEADER:
+• Background: Linear gradient primary
+• Text: White (#ffffff)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+✅ IMPLEMENTATION STATUS
+
+Database Queries:    ✅ Added
+Level Calculations:  ✅ Complete
+Table Display:       ✅ Created
+Color Coding:        ✅ Applied
+Footer Insights:     ✅ Added
+Responsive Design:   ✅ Implemented
+Hover Effects:       ✅ Added
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🚀 ACCESS YOUR MLM BREAKDOWN
+
+URL: http://localhost/DigitalKhazana/affiliate-dashboard.php
+
+Location: Below the 8 statistics cards
+
+Features:
+• Real-time data
+• Auto-updating
+• Interactive table
+• Detailed breakdown
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+📊 EXAMPLE SCENARIOS
+
+SCENARIO 1: Growing Network
+Level 1: 50 referrals, ₹10,000 earnings
+Level 2: 30 referrals, ₹4,500 earnings
+Level 3: 15 referrals, ₹900 earnings
+→ Strong direct referral base
+
+SCENARIO 2: Deep Network
+Level 1: 20 referrals, ₹5,000 earnings
+Level 2: 40 referrals, ₹6,000 earnings
+Level 3: 60 referrals, ₹3,600 earnings
+→ Excellent MLM penetration
+
+SCENARIO 3: Starting Out
+Level 1: 5 referrals, ₹1,000 earnings
+Level 2: 2 referrals, ₹300 earnings
+Level 3: 0 referrals, ₹0 earnings
+→ Building foundation
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎉 COMPLETE!
+
+Your affiliate dashboard now shows:
+• Level-wise referral counts
+• Earnings breakdown by level
+• Pending vs paid amounts
+• Performance insights
+• Best performing level
+• MLM network depth
+
+All with beautiful color-coding and interactive design!
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+Last Updated: November 5, 2025
+Status: ✅ LIVE & OPERATIONAL
+
+═══════════════════════════════════════════════════════════════════════════

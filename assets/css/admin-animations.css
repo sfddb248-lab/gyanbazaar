@@ -1,0 +1,451 @@
+/* ============================================
+   ADMIN PANEL ANIMATIONS
+   Lightweight animations for cards, buttons, and icons
+   ============================================ */
+
+/* ============================================
+   1. CARD ANIMATIONS
+   ============================================ */
+
+/* Card Lift Effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Card Scale Effect */
+.card-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Card Glow Effect */
+.card-glow {
+    transition: all 0.3s ease;
+}
+
+.card-glow:hover {
+    box-shadow: 0 0 20px rgba(18, 102, 241, 0.4),
+                0 0 40px rgba(18, 102, 241, 0.2) !important;
+}
+
+/* ============================================
+   2. BUTTON EFFECTS
+   ============================================ */
+
+/* Button Ripple Effect */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Button Hover Lift */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Button Gradient Effect */
+.btn-primary {
+    background: linear-gradient(135deg, #1266f1 0%, #0d47a1 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0d47a1 0%, #1266f1 100%);
+    box-shadow: 0 6px 20px rgba(18, 102, 241, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #00b74a 0%, #007c32 100%);
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #007c32 0%, #00b74a 100%);
+    box-shadow: 0 6px 20px rgba(0, 183, 74, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f93154 0%, #c41230 100%);
+    border: none;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #c41230 0%, #f93154 100%);
+    box-shadow: 0 6px 20px rgba(249, 49, 84, 0.4);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffa900 0%, #cc8800 100%);
+    border: none;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #cc8800 0%, #ffa900 100%);
+    box-shadow: 0 6px 20px rgba(255, 169, 0, 0.4);
+}
+
+/* Small Button Effects */
+.btn-sm:hover {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   3. ICON ANIMATIONS
+   ============================================ */
+
+/* Icon Bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.icon-bounce {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.fa-bounce:hover,
+i.bounce:hover {
+    animation: bounce 0.6s ease;
+}
+
+/* Icon Pulse */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.icon-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.fa-pulse:hover,
+i.pulse:hover {
+    animation: pulse 0.6s ease;
+}
+
+/* Icon Rotate */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.fa-rotate:hover,
+i.rotate:hover {
+    animation: rotate 0.6s ease;
+}
+
+/* Icon Spin (for loading) */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spin,
+.icon-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Icon Shake */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.icon-shake:hover {
+    animation: shake 0.5s ease;
+}
+
+/* Icon Hover Effects */
+i, .fas, .far, .fab {
+    transition: all 0.3s ease;
+}
+
+i:hover, .fas:hover, .far:hover, .fab:hover {
+    transform: scale(1.2);
+    color: #1266f1;
+}
+
+/* Specific Icon Animations */
+.fa-bell:hover {
+    animation: shake 0.5s ease;
+}
+
+.fa-sync:hover,
+.fa-refresh:hover {
+    animation: rotate 0.6s ease;
+}
+
+.fa-heart:hover {
+    animation: pulse 0.6s ease;
+    color: #f93154;
+}
+
+.fa-star:hover {
+    animation: pulse 0.6s ease;
+    color: #ffa900;
+}
+
+.fa-check-circle:hover {
+    animation: bounce 0.6s ease;
+    color: #00b74a;
+}
+
+/* ============================================
+   4. TABLE ROW ANIMATIONS
+   ============================================ */
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(18, 102, 241, 0.05);
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   5. BADGE ANIMATIONS
+   ============================================ */
+
+.badge {
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   6. ALERT ANIMATIONS
+   ============================================ */
+
+.alert {
+    animation: slideInDown 0.5s ease;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   7. MODAL ANIMATIONS
+   ============================================ */
+
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: scale(0.8);
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* ============================================
+   8. FORM INPUT ANIMATIONS
+   ============================================ */
+
+.form-control,
+.form-select {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(18, 102, 241, 0.2);
+}
+
+/* ============================================
+   9. NAVBAR ANIMATIONS
+   ============================================ */
+
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #1266f1;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+/* ============================================
+   10. LOADING ANIMATIONS
+   ============================================ */
+
+.spinner-border {
+    animation: spin 1s linear infinite;
+}
+
+/* ============================================
+   11. UTILITY CLASSES
+   ============================================ */
+
+/* Hover Lift */
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* Hover Scale */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Hover Glow */
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(18, 102, 241, 0.5);
+}
+
+/* Smooth Transitions */
+.smooth {
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   12. RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Reduce animations on mobile for performance */
+    .card:hover {
+        transform: translateY(-3px);
+    }
+    
+    .btn:hover {
+        transform: translateY(-1px);
+    }
+    
+    i:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* ============================================
+   13. ACCESSIBILITY
+   ============================================ */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   14. PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Use GPU acceleration for transforms */
+.card,
+.btn,
+i,
+.table tbody tr {
+    will-change: transform;
+}
+
+/* Prevent layout shifts */
+* {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}

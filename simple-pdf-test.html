@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple PDF Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <h2>Simple PDF.js Test</h2>
+    <div id="status">Loading...</div>
+    <canvas id="pdfCanvas"></canvas>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        
+        const pdfPath = 'uploads/products/69063102d33b2_1762013442.pdf';
+        const canvas = document.getElementById('pdfCanvas');
+        const ctx = canvas.getContext('2d');
+        const status = document.getElementById('status');
+        
+        console.log('Attempting to load:', pdfPath);
+        status.textContent = 'Loading PDF from: ' + pdfPath;
+        
+        pdfjsLib.getDocument(pdfPath).promise.then(function(pdf) {
+            console.log('PDF loaded! Pages:', pdf.numPages);
+            status.textContent = 'PDF loaded successfully! Pages: ' + pdf.numPages;
+            
+            // Render first page
+            pdf.getPage(1).then(function(page) {
+                const viewport = page.getViewport({ scale: 1.5 });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                
+                page.render({
+                    canvasContext: ctx,
+                    viewport: viewport
+                });
+                
+                status.textContent += ' - Page 1 rendered!';
+            });
+        }).catch(function(error) {
+            console.error('Error:', error);
+            status.textContent = 'ERROR: ' + error.message;
+            status.style.color = 'red';
+        });
+    </script>
+</body>
+</html>
