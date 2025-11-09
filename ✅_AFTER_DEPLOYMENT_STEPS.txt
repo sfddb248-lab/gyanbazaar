@@ -1,0 +1,183 @@
+========================================
+  🎉 GYANBAZAAR DEPLOYMENT IN PROGRESS
+========================================
+
+Your deployment is running! Here's what to do next:
+
+========================================
+  STEP 1: WAIT FOR DEPLOYMENT (5-10 MIN)
+========================================
+
+Watch the deployment logs in Render dashboard:
+- Database "gyanbazaar-db" is being created ✓
+- Web service "gyanbazaar" is being deployed...
+
+You'll see:
+✓ Building Docker image
+✓ Installing dependencies
+✓ Starting PHP server
+✓ Service is live!
+
+========================================
+  STEP 2: GET YOUR LIVE URL
+========================================
+
+Once deployed, Render will show your URL:
+https://gyanbazaar.onrender.com
+(or similar)
+
+Click on "gyanbazaar" service to see the URL.
+
+========================================
+  STEP 3: IMPORT DATABASE
+========================================
+
+Your site needs the database structure!
+
+Option A: Use Render Shell
+1. Go to gyanbazaar service
+2. Click "Shell" tab
+3. Run: mysql -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME < database-fixed.sql
+
+Option B: Use MySQL Client
+1. Get database credentials from Render
+2. Connect using MySQL Workbench or phpMyAdmin
+3. Import database-fixed.sql file
+
+Database credentials are in:
+Dashboard → gyanbazaar-db → Connect
+
+========================================
+  STEP 4: UPDATE DATABASE CONFIG
+========================================
+
+The environment variables are already set:
+✓ DB_HOST
+✓ DB_USER
+✓ DB_PASS
+✓ DB_NAME
+✓ DB_PORT
+
+Make sure your config/database.php uses these:
+$host = getenv('DB_HOST');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$name = getenv('DB_NAME');
+
+========================================
+  STEP 5: TEST YOUR SITE
+========================================
+
+Visit your live URL and test:
+✓ Homepage loads
+✓ Login works (admin/admin123)
+✓ Products display
+✓ Courses display
+✓ Checkout works
+✓ Affiliate system works
+
+========================================
+  STEP 6: CONFIGURE PAYMENT GATEWAYS
+========================================
+
+Update in admin panel:
+1. Login to admin
+2. Go to Settings
+3. Add your payment gateway keys:
+   - Razorpay
+   - PayPal
+   - Stripe
+   - PhonePe
+
+========================================
+  TROUBLESHOOTING
+========================================
+
+If site shows errors:
+
+1. Check Logs:
+   Dashboard → gyanbazaar → Logs
+
+2. Common Issues:
+   - Database not imported → Import SQL file
+   - Connection error → Check DB credentials
+   - 500 error → Check PHP error logs
+
+3. Restart Service:
+   Dashboard → gyanbazaar → Manual Deploy → Deploy
+
+========================================
+  IMPORTANT: FREE TIER LIMITATIONS
+========================================
+
+Render Free Tier:
+✓ Site sleeps after 15 min inactivity
+✓ Takes 30-60 sec to wake up
+✓ 750 hours/month free
+✓ Database: 1GB storage
+
+To keep site always active:
+- Upgrade to paid plan ($7/month)
+- Or use a ping service to keep it awake
+
+========================================
+  CUSTOM DOMAIN (OPTIONAL)
+========================================
+
+To use your own domain:
+1. Go to gyanbazaar service
+2. Click "Settings" → "Custom Domain"
+3. Add your domain
+4. Update DNS records as shown
+5. SSL certificate auto-generated!
+
+========================================
+  NEXT STEPS
+========================================
+
+✓ Deployment running
+→ Wait for completion
+→ Import database
+→ Test site
+→ Configure payments
+→ Add custom domain (optional)
+→ Start selling! 🚀
+
+========================================
+  YOUR DEPLOYMENT STATUS
+========================================
+
+Check current status at:
+https://dashboard.render.com/blueprint/wss-d48adujqnbc73dcls5g
+
+Service will be live at:
+https://gyanbazaar.onrender.com
+
+========================================
+  NEED HELP?
+========================================
+
+- View logs in Render dashboard
+- Check database connection
+- Verify environment variables
+- Contact Render support if needed
+
+========================================
+  🎉 CONGRATULATIONS!
+========================================
+
+Your GyanBazaar e-learning platform is being
+deployed to the cloud! Once complete, you'll
+have a fully functional online store with:
+
+✓ Course management
+✓ Product sales
+✓ Affiliate system
+✓ Payment gateways
+✓ User management
+✓ Admin dashboard
+
+Wait for deployment to complete, then follow
+the steps above to get your site fully running!
+
+========================================
