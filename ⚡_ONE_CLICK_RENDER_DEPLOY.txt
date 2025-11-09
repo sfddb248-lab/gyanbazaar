@@ -1,0 +1,60 @@
+========================================
+  ONE-CLICK RENDER DEPLOYMENT
+========================================
+
+CLICK THIS LINK TO DEPLOY AUTOMATICALLY:
+👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+
+https://render.com/deploy?repo=https://github.com/sfddb248-lab/gyanbazaar
+
+👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
+
+========================================
+  WHAT HAPPENS WHEN YOU CLICK:
+========================================
+
+1. Opens Render with your repo pre-loaded
+2. Automatically reads render.yaml config
+3. Creates web service + MySQL database
+4. Connects everything automatically
+5. Deploys your site
+
+========================================
+  AFTER CLICKING THE LINK:
+========================================
+
+1. Login/Signup to Render (if not logged in)
+2. Click "Apply" button
+3. Wait 5-10 minutes for deployment
+4. Your site will be live!
+
+========================================
+  YOUR LIVE URL WILL BE:
+========================================
+
+https://gyanbazaar.onrender.com
+
+(or similar - Render will show you the exact URL)
+
+========================================
+  ALTERNATIVE METHOD:
+========================================
+
+If the one-click link doesn't work:
+
+1. Go to: https://dashboard.render.com/
+2. Click "New +" → "Blueprint"
+3. Connect repo: sfddb248-lab/gyanbazaar
+4. Click "Apply"
+
+========================================
+  NEED YOUR RENDER API KEY?
+========================================
+
+To deploy via API/script:
+1. Go to: https://dashboard.render.com/account/api-keys
+2. Create new API key
+3. Save it securely
+4. Use it with the deployment script
+
+========================================
