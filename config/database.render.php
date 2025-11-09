@@ -1,20 +1,22 @@
 <?php
 // Render.com Database Configuration
-// Render provides these as environment variables
+// Render uses PostgreSQL (not MySQL) on free tier
 
 define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
 define('DB_USER', getenv('DB_USER') ?: 'root');
 define('DB_PASS', getenv('DB_PASS') ?: '');
 define('DB_NAME', getenv('DB_NAME') ?: 'gyanbazaar');
-define('DB_PORT', getenv('DB_PORT') ?: '3306');
+define('DB_PORT', getenv('DB_PORT') ?: '5432');
 
-// Create connection
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+// PostgreSQL connection string
+$conn_string = "host=" . DB_HOST . " port=" . DB_PORT . " dbname=" . DB_NAME . " user=" . DB_USER . " password=" . DB_PASS;
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    // Use PDO for PostgreSQL
+    $conn = new PDO("pgsql:$conn_string");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->exec("SET NAMES 'UTF8'");
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
-
-$conn->set_charset("utf8mb4");
 ?>

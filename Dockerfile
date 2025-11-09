@@ -7,12 +7,13 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
+    libpq-dev \
     zip \
     unzip \
     && rm -rf /var/lib/apt/lists/*
 
-# Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mysqli mbstring exif pcntl bcmath gd
+# Install PHP extensions (including PostgreSQL)
+RUN docker-php-ext-install pdo_mysql pdo_pgsql mysqli mbstring exif pcntl bcmath gd
 
 # Enable Apache modules
 RUN a2enmod rewrite headers
