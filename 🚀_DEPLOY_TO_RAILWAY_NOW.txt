@@ -1,0 +1,66 @@
+========================================
+  DEPLOY TO RAILWAY (5 MINUTES!)
+========================================
+
+Railway has FREE MySQL and is FASTER than Render!
+
+CLICK THIS LINK:
+👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+
+https://railway.app/new
+
+👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
+
+========================================
+  STEP-BY-STEP (SUPER EASY)
+========================================
+
+1. Click "Deploy from GitHub repo"
+
+2. Login with GitHub (if needed)
+
+3. Select: sfddb248-lab/gyanbazaar
+
+4. Click "Deploy Now"
+
+5. Wait 2-3 minutes
+
+6. Click "Add Database" → "MySQL"
+
+7. Your site will be LIVE!
+
+========================================
+  YOUR SITE WILL BE AT:
+========================================
+
+https://gyanbazaar-production.up.railway.app
+
+(Railway gives you the exact URL)
+
+========================================
+  AFTER DEPLOYMENT:
+========================================
+
+1. Click on your service
+2. Click "Variables" tab
+3. Railway auto-connects MySQL!
+4. Visit your site URL
+5. Run: /import-db.php to import database
+
+DONE! ✅
+
+========================================
+  WHY RAILWAY IS BETTER:
+========================================
+
+✓ Has FREE MySQL (Render doesn't)
+✓ Faster deployment (2-3 min vs 10 min)
+✓ Auto-connects database
+✓ Better free tier
+✓ No PostgreSQL conversion needed
+
+========================================
+
+START NOW: https://railway.app/new
+
+========================================
